@@ -1,3 +1,17 @@
+# Exclusions per aquest projecte
+
+# Editor Jetbrains
+/.idea/
+
+# Editor VS Code
+/.vscode/
+
+# Editor Visual Studio
+/.vs/
+
+
+# Plantilla de .gitignore per Unity
+
 # This .gitignore file should be placed at the root of your Unity project directory
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
