@@ -1,0 +1,23 @@
+# Blender 4.2.0 MTL File: 'None'
+# www.blender.org
+
+newmtl Socle
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 1
+map_Kd Socle_Albedo.jpg
+map_d Socle_Opacity.jpg
+
+newmtl Vespa
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 1
+map_Kd Vespa_ [Albedo].jpg
+map_d Vespa_ [Opacity].jpg
+map_Bump maps/Map__10_Normal Bump.tga
