@@ -507,6 +507,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 12912184372944956, guid: 780c406bb38462b029a11d868778498b, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 495060739342776624, guid: 780c406bb38462b029a11d868778498b, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8613937630984637681, guid: 780c406bb38462b029a11d868778498b, type: 3}
       propertyPath: m_Name
       value: XR Origin Hands (XR Rig) Variant
