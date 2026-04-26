@@ -5,6 +5,7 @@ public class ConnectionNode : MonoBehaviour
     public string nodeID;
     public string targetID;
     public bool isMatched = false;
+    public ConnectionNode targetNode;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,7 +14,7 @@ public class ConnectionNode : MonoBehaviour
             if (otherNode.nodeID == targetID)
             {
                 isMatched = true;
-                Debug.Log($"<color=cyan>{nodeID} ha trobat el seu encaix!</color>");
+                targetNode = otherNode;
             }
         }
     }
@@ -25,6 +26,7 @@ public class ConnectionNode : MonoBehaviour
             if (otherNode.nodeID == targetID)
             {
                 isMatched = false;
+                targetNode = null;
             }
         }
     }
