@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!64 &7179825 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 4623731265394157015, guid: c3dbb0469ea2cd04e89e46eacdd51a82, type: 3}
+  m_PrefabInstance: {fileID: 1739256769}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &132430320
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,6 +161,11 @@ Transform:
   - {fileID: 1529985304}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &141820803 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 8846008851976061258, guid: d9ec802719650a347b9b6e6e6ac156a5, type: 3}
+  m_PrefabInstance: {fileID: 1515071825}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &169186884
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,6 +357,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5293648329478724252, guid: 20c284f8b3c68b94491f4fadc5705b1f, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5293648329478724252, guid: 20c284f8b3c68b94491f4fadc5705b1f, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853304553679500636, guid: 20c284f8b3c68b94491f4fadc5705b1f, type: 3}
+      propertyPath: m_MovementType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853304553679500636, guid: 20c284f8b3c68b94491f4fadc5705b1f, type: 3}
+      propertyPath: m_Colliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853304553679500636, guid: 20c284f8b3c68b94491f4fadc5705b1f, type: 3}
+      propertyPath: 'm_Colliders.Array.data[0]'
+      value: 
+      objectReference: {fileID: 742596038}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -473,6 +503,11 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!64 &213121877 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 4781437303388136026, guid: c40446add25d1794989183f570f9377b, type: 3}
+  m_PrefabInstance: {fileID: 732090234}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &306795132
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,6 +813,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 132430321}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &593483504 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 893584565935208761, guid: 1e35d52c8e4ae8a4c80d975a0c51de81, type: 3}
+  m_PrefabInstance: {fileID: 1870252577}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &723812336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -842,6 +882,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 93.172
       objectReference: {fileID: 0}
+    - target: {fileID: 5175142465506967006, guid: 7376a2423618e464a831917b9eb5d231, type: 3}
+      propertyPath: m_MovementType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5175142465506967006, guid: 7376a2423618e464a831917b9eb5d231, type: 3}
+      propertyPath: m_Colliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5175142465506967006, guid: 7376a2423618e464a831917b9eb5d231, type: 3}
+      propertyPath: 'm_Colliders.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1928718443}
+    - target: {fileID: 8393122188207952414, guid: 7376a2423618e464a831917b9eb5d231, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8393122188207952414, guid: 7376a2423618e464a831917b9eb5d231, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -855,6 +915,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 737540439885180386, guid: c40446add25d1794989183f570f9377b, type: 3}
+      propertyPath: m_MovementType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 737540439885180386, guid: c40446add25d1794989183f570f9377b, type: 3}
+      propertyPath: m_Colliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 737540439885180386, guid: c40446add25d1794989183f570f9377b, type: 3}
+      propertyPath: 'm_Colliders.Array.data[0]'
+      value: 
+      objectReference: {fileID: 213121877}
+    - target: {fileID: 4150020401211507234, guid: c40446add25d1794989183f570f9377b, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150020401211507234, guid: c40446add25d1794989183f570f9377b, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5053521647687457896, guid: c40446add25d1794989183f570f9377b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.148
@@ -920,6 +1000,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c40446add25d1794989183f570f9377b, type: 3}
+--- !u!64 &742596038 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 5284046136005538923, guid: 20c284f8b3c68b94491f4fadc5705b1f, type: 3}
+  m_PrefabInstance: {fileID: 181758376}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &872815428 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 677466745720105927, guid: 846e57159dd47e44080ced3dfe678514, type: 3}
@@ -1044,6 +1129,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 313991490882903221, guid: f5853845236a4d241be9dbdb22674e2c, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 313991490882903221, guid: f5853845236a4d241be9dbdb22674e2c, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030744853054976885, guid: f5853845236a4d241be9dbdb22674e2c, type: 3}
+      propertyPath: m_MovementType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030744853054976885, guid: f5853845236a4d241be9dbdb22674e2c, type: 3}
+      propertyPath: m_Colliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030744853054976885, guid: f5853845236a4d241be9dbdb22674e2c, type: 3}
+      propertyPath: 'm_Colliders.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1700405184}
     - target: {fileID: 5969192449256631490, guid: f5853845236a4d241be9dbdb22674e2c, type: 3}
       propertyPath: m_Name
       value: Piece_Cat_05
@@ -1400,6 +1505,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piece_Cat_06
       objectReference: {fileID: 0}
+    - target: {fileID: 5826990239812121656, guid: d9ec802719650a347b9b6e6e6ac156a5, type: 3}
+      propertyPath: m_MovementType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5826990239812121656, guid: d9ec802719650a347b9b6e6e6ac156a5, type: 3}
+      propertyPath: m_Colliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5826990239812121656, guid: d9ec802719650a347b9b6e6e6ac156a5, type: 3}
+      propertyPath: 'm_Colliders.Array.data[0]'
+      value: 
+      objectReference: {fileID: 141820803}
+    - target: {fileID: 7166968970714160120, guid: d9ec802719650a347b9b6e6e6ac156a5, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166968970714160120, guid: d9ec802719650a347b9b6e6e6ac156a5, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1567,6 +1692,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1700405184 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 5843175015743554288, guid: f5853845236a4d241be9dbdb22674e2c, type: 3}
+  m_PrefabInstance: {fileID: 1142176680}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1723395539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1631,15 +1761,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5444451352333165129, guid: ff7d4b1dc1802a749aafd2197efb8bab, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5444451352333165129, guid: ff7d4b1dc1802a749aafd2197efb8bab, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657329323968548233, guid: ff7d4b1dc1802a749aafd2197efb8bab, type: 3}
+      propertyPath: m_MovementType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8657329323968548233, guid: ff7d4b1dc1802a749aafd2197efb8bab, type: 3}
       propertyPath: m_AttachTransform
       value: 
       objectReference: {fileID: 1520815119}
+    - target: {fileID: 8657329323968548233, guid: ff7d4b1dc1802a749aafd2197efb8bab, type: 3}
+      propertyPath: m_Colliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657329323968548233, guid: ff7d4b1dc1802a749aafd2197efb8bab, type: 3}
+      propertyPath: 'm_Colliders.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1723395540}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff7d4b1dc1802a749aafd2197efb8bab, type: 3}
+--- !u!64 &1723395540 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 4540260091279862657, guid: ff7d4b1dc1802a749aafd2197efb8bab, type: 3}
+  m_PrefabInstance: {fileID: 1723395539}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1739256769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1708,6 +1863,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5314688926099319968, guid: c3dbb0469ea2cd04e89e46eacdd51a82, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5314688926099319968, guid: c3dbb0469ea2cd04e89e46eacdd51a82, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820864903718585184, guid: c3dbb0469ea2cd04e89e46eacdd51a82, type: 3}
+      propertyPath: m_MovementType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820864903718585184, guid: c3dbb0469ea2cd04e89e46eacdd51a82, type: 3}
+      propertyPath: m_Colliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820864903718585184, guid: c3dbb0469ea2cd04e89e46eacdd51a82, type: 3}
+      propertyPath: 'm_Colliders.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7179825}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1721,6 +1896,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1445313453521310912, guid: 1e35d52c8e4ae8a4c80d975a0c51de81, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445313453521310912, guid: 1e35d52c8e4ae8a4c80d975a0c51de81, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2856786724287838976, guid: 1e35d52c8e4ae8a4c80d975a0c51de81, type: 3}
+      propertyPath: m_MovementType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2856786724287838976, guid: 1e35d52c8e4ae8a4c80d975a0c51de81, type: 3}
+      propertyPath: m_Colliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2856786724287838976, guid: 1e35d52c8e4ae8a4c80d975a0c51de81, type: 3}
+      propertyPath: 'm_Colliders.Array.data[0]'
+      value: 
+      objectReference: {fileID: 593483504}
     - target: {fileID: 4792843329304503479, guid: 1e35d52c8e4ae8a4c80d975a0c51de81, type: 3}
       propertyPath: m_Name
       value: Piece_Cat_01
@@ -1881,6 +2076,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 132430321}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!64 &1928718443 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 6838407305072707523, guid: 7376a2423618e464a831917b9eb5d231, type: 3}
+  m_PrefabInstance: {fileID: 723812336}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

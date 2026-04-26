@@ -68,7 +68,7 @@ public class PuzzlePiece : MonoBehaviour
 
         transform.SetParent(null);
 
-        rb.isKinematic = true;
+        //rb.isKinematic = true;
         rb.detectCollisions = false;
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
@@ -102,7 +102,7 @@ public class PuzzlePiece : MonoBehaviour
     public void ResetPiece()
     {
         isLocked = false;
-        rb.isKinematic = false;
+        //rb.isKinematic = false;
         if (grabInteractable != null) grabInteractable.enabled = true;
     }
 }
