@@ -119,55 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &75190725 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6943913119171859885, guid: 780c406bb38462b029a11d868778498b, type: 3}
-  m_PrefabInstance: {fileID: 195442624}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &75190730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 75190725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_AllowHDROutput: 1
-  m_UseScreenCoordOverride: 0
-  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_TaaSettings:
-    m_Quality: 3
-    m_FrameInfluence: 0.1
-    m_JitterScale: 1
-    m_MipBias: 0
-    m_VarianceClampScale: 0.9
-    m_ContrastAdaptiveSharpening: 0
-  m_Version: 2
 --- !u!1 &132430320
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,30 +291,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 12912184372944956, guid: 780c406bb38462b029a11d868778498b, type: 3}
-      propertyPath: m_BlockingMask.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 495060739342776624, guid: 780c406bb38462b029a11d868778498b, type: 3}
-      propertyPath: m_BlockingMask.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 495060739342776626, guid: 780c406bb38462b029a11d868778498b, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2703879100349051069, guid: 780c406bb38462b029a11d868778498b, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8072232450991443312, guid: 780c406bb38462b029a11d868778498b, type: 3}
-      propertyPath: m_RequestedTrackingOriginMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8376648353814616385, guid: 780c406bb38462b029a11d868778498b, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8613937630984637681, guid: 780c406bb38462b029a11d868778498b, type: 3}
       propertyPath: m_Name
       value: XR Origin Hands (XR Rig) Variant
@@ -411,16 +338,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6943913119171859885, guid: 780c406bb38462b029a11d868778498b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 75190730}
-    - targetCorrespondingSourceObject: {fileID: 495060739342776626, guid: 780c406bb38462b029a11d868778498b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1329343370}
-    - targetCorrespondingSourceObject: {fileID: 8376648353814616385, guid: 780c406bb38462b029a11d868778498b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 922177718}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 780c406bb38462b029a11d868778498b, type: 3}
 --- !u!1 &306795132
 GameObject:
@@ -838,44 +756,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 132430321}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1 &922177712 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8376648353814616385, guid: 780c406bb38462b029a11d868778498b, type: 3}
-  m_PrefabInstance: {fileID: 195442624}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &922177713 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1163778364201247325, guid: 780c406bb38462b029a11d868778498b, type: 3}
-  m_PrefabInstance: {fileID: 195442624}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &922177718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922177712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee10491ef6d5d1d49a270cf6b09bdc19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.VR::OVROverlayCanvas
-  _mipmapMode: 0
-  _dynamicResolution: 1
-  _redrawResolutionThreshold: 2147483647
-  rectTransform: {fileID: 922177713}
-  maxTextureSize: 2048
-  manualRedraw: 0
-  renderInterval: 1
-  renderIntervalFrameOffset: 0
-  superSample: 0
-  layer: 5
-  opacity: 2
-  shape: 0
-  curveRadius: 1
-  overlapMask: 0
-  compositionMode: 1
-  _overlayEnabled: 1
 --- !u!1001 &1142157308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1068,44 +948,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 132430321}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1329343364 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 495060739342776626, guid: 780c406bb38462b029a11d868778498b, type: 3}
-  m_PrefabInstance: {fileID: 195442624}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &1329343365 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 495060739342776625, guid: 780c406bb38462b029a11d868778498b, type: 3}
-  m_PrefabInstance: {fileID: 195442624}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1329343370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329343364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee10491ef6d5d1d49a270cf6b09bdc19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.VR::OVROverlayCanvas
-  _mipmapMode: 0
-  _dynamicResolution: 1
-  _redrawResolutionThreshold: 2147483647
-  rectTransform: {fileID: 1329343365}
-  maxTextureSize: 2048
-  manualRedraw: 0
-  renderInterval: 1
-  renderIntervalFrameOffset: 0
-  superSample: 0
-  layer: 5
-  opacity: 2
-  shape: 0
-  curveRadius: 1
-  overlapMask: 0
-  compositionMode: 1
-  _overlayEnabled: 1
 --- !u!1 &1529985300
 GameObject:
   m_ObjectHideFlags: 0
