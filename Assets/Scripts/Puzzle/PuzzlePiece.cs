@@ -8,6 +8,8 @@ public class PuzzlePiece : MonoBehaviour
     private XRGrabInteractable grabInteractable;
     private ConnectionNode[] nodes;
     private Rigidbody rb;
+    public AudioSource sound;
+    public ParticleSystem particle;
 
     public bool isLocked = false;
 
@@ -97,6 +99,9 @@ public class PuzzlePiece : MonoBehaviour
         }
 
         rb.detectCollisions = true;
+
+        sound.Play();
+        particle.Play();
     }
 
     public void ResetPiece()
