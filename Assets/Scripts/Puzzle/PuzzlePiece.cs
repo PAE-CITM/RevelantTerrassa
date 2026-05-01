@@ -1,11 +1,13 @@
+using Oculus.Interaction;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class PuzzlePiece : MonoBehaviour
 {
-    private XRGrabInteractable grabInteractable;
+    private Grabbable grabInteractable;
     private ConnectionNode[] nodes;
     private Rigidbody rb;
     public AudioSource sound;
@@ -17,11 +19,11 @@ public class PuzzlePiece : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         nodes = GetComponentsInChildren<ConnectionNode>();
-        grabInteractable = GetComponent<XRGrabInteractable>();
+        grabInteractable = GetComponent<Grabbable>();
 
         if (grabInteractable != null)
         {
-            grabInteractable.selectExited.AddListener(OnDrop);
+            grabInteractable.WhenPointerEventRaised += OnDrop;
         }
     }
 
@@ -49,10 +51,10 @@ public class PuzzlePiece : MonoBehaviour
         }
     }
 
-    private void OnDrop(SelectExitEventArgs args)
+    private void OnDrop(PointerEvent args)
     {
-        if (isLocked) return;
-
+        if (isLocked || args.Type != PointerEventType.Unselect) return;
+        
         foreach (var node in nodes)
         {
             if (node.isMatched && node.targetNode != null)
