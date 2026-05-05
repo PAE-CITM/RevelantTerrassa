@@ -1,43 +1,44 @@
-﻿using UnityEngine;
+using UnityEngine;
+using System.Collections.Generic;
 
 public class PuzzleManager : MonoBehaviour
 {
-    public int totalNodesNecessary; 
+    private List<ConnectionNode> sockets = new List<ConnectionNode>();
     private bool puzzleFinished = false;
 
     void Start()
     {
-        ConnectionNode[] allNodesInScene = FindObjectsOfType<ConnectionNode>();
-        totalNodesNecessary = allNodesInScene.Length;
-        Debug.Log($"Nodes totals per guanyar: {totalNodesNecessary}");
+        ConnectionNode[] foundNodes = GetComponentsInChildren<ConnectionNode>();
+        
+        foreach (var node in foundNodes)
+        {
+            sockets.Add(node);
+        }
+
+        Debug.Log($"[PuzzleManager] {gameObject.name} inicialitzat amb {sockets.Count} sockets.");
     }
 
-    void Update()
+    public void CheckCompletion()
     {
         if (puzzleFinished) return;
 
-        GameObject puzzleParent = GameObject.Find("Puzzle_Completat");
-
-        if (puzzleParent != null)
+        int matchesFound = 0;
+        foreach (var socket in sockets)
         {
-            ConnectionNode[] completedNodes = puzzleParent.GetComponentsInChildren<ConnectionNode>();
+            if (socket.isMatched) matchesFound++;
+        }
 
-            int matchesFound = 0;
-            foreach (var node in completedNodes)
-            {
-                if (node.isMatched) matchesFound++;
-            }
+        Debug.Log($"[PuzzleManager] Progrés: {matchesFound}/{sockets.Count}");
 
-            if (matchesFound >= totalNodesNecessary && totalNodesNecessary > 0)
-            {
-                puzzleFinished = true;
-                WinGame();
-            }
+        if (matchesFound >= sockets.Count && sockets.Count > 0)
+        {
+            puzzleFinished = true;
+            WinGame();
         }
     }
 
     void WinGame()
     {
-        Debug.Log("<color=green><b>PUZZLE ACABAT REALMENT!</b></color>");
+        Debug.Log($"<color=green><b>PUZZLE {gameObject.name} ACABAT!</b></color>");
     }
 }
