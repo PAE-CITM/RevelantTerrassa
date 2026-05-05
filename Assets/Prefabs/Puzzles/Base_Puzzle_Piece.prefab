@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 501429008047839994}
   - component: {fileID: 5462866279747012549}
   - component: {fileID: 3087015763227238170}
+  - component: {fileID: 3999962873911427059}
+  - component: {fileID: 1126076067985460030}
   m_Layer: 0
   m_Name: Base_Puzzle_Piece
   m_TagString: Untagged
@@ -122,6 +124,40 @@ MonoBehaviour:
   _boundsCollider: {fileID: 1941059353534118250}
   _colliders:
   - {fileID: 1941059353534118250}
+--- !u!114 &3999962873911427059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368613578970951740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07525681efbca7a4e9643ab3a592ada7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.DistanceGrabInteractable
+  _interactorFilters: []
+  _maxInteractors: -1
+  _maxSelectingInteractors: -1
+  _data: {fileID: 0}
+  _pointableElement: {fileID: 5462866279747012549}
+  _rigidbody: {fileID: 8315411476824331375}
+  _grabSource: {fileID: 0}
+  _resetGrabOnGrabsUpdated: 1
+  _physicsGrabbable: {fileID: 0}
+  _movementProvider: {fileID: 1126076067985460030}
+--- !u!114 &1126076067985460030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368613578970951740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 953054d108799b942815afb3405983ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.MoveFromTargetProvider
 --- !u!1 &1209458541551329692
 GameObject:
   m_ObjectHideFlags: 0
