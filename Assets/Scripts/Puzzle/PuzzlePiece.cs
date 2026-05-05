@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class PuzzlePiece : MonoBehaviour
 {
-    private Grabbable grabInteractable;
+    private Grabbable grabbable;
 
     private ConnectionNode node;
 
@@ -20,11 +20,11 @@ public class PuzzlePiece : MonoBehaviour
 
         node = GetComponentInChildren<ConnectionNode>();
 
-        grabInteractable = GetComponent<Grabbable>();
+        grabbable = GetComponent<Grabbable>();
 
-        if (grabInteractable != null)
+        if (grabbable != null)
         {
-            grabInteractable.WhenPointerEventRaised += OnDrop;
+            grabbable.WhenPointerEventRaised += OnDrop;
         }
     }
 
@@ -62,7 +62,12 @@ public class PuzzlePiece : MonoBehaviour
     {
         if (isLocked) return;
         isLocked = true;
-
+        
+        // Disable further interaction once placed in socket. This is a hacky way,
+        // but Meta XR SDK docs are a maze and I couldn't find a proper solution 
+        var interactables = GetComponentsInChildren<IInteractableView>();
+        foreach (var interactable in interactables) if (interactable is MonoBehaviour mb) mb.enabled = false;
+        
         rb.isKinematic = true;
         rb.detectCollisions = false;
         rb.linearVelocity = Vector3.zero;
@@ -74,7 +79,7 @@ public class PuzzlePiece : MonoBehaviour
         Vector3 nodeOffset = transform.position - matchedNode.transform.position;
         transform.position = matchedNode.targetNode.transform.position + nodeOffset;
 
-        if (grabInteractable != null) grabInteractable.enabled = false;
+        if (grabbable != null) grabbable.enabled = false;
 
         rb.detectCollisions = true;
 
@@ -94,6 +99,6 @@ public class PuzzlePiece : MonoBehaviour
     {
         isLocked = false;
         rb.isKinematic = false;
-        if (grabInteractable != null) grabInteractable.enabled = true;
+        if (grabbable != null) grabbable.enabled = true;
     }
 }
