@@ -121,7 +121,7 @@ MonoBehaviour:
   _pointableElement: {fileID: 5462866279747012549}
   _boundsCollider: {fileID: 1941059353534118250}
   _colliders:
-  - {fileID: 0}
+  - {fileID: 1941059353534118250}
 --- !u!1 &1209458541551329692
 GameObject:
   m_ObjectHideFlags: 0
