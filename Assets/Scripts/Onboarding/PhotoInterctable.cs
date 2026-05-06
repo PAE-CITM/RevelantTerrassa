@@ -34,8 +34,7 @@ namespace OnBoarding
 
         public void Show()
         {
-            gameObject.SetActive(true);
-            StartCoroutine(Fade(0f, 1f));
+            gameObject.SetActive(true);;
         }
 
         public void OnGazeStay()
