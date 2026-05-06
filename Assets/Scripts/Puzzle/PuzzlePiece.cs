@@ -11,6 +11,7 @@ public class PuzzlePiece : MonoBehaviour
     private Rigidbody rb;
     public AudioSource sound;
     public ParticleSystem particle;
+    private Outline outline;
 
     public bool isLocked = false;
 
@@ -21,6 +22,8 @@ public class PuzzlePiece : MonoBehaviour
         node = GetComponentInChildren<ConnectionNode>();
 
         grabbable = GetComponent<Grabbable>();
+
+        outline = GetComponent<Outline>();
 
         if (grabbable != null)
         {
@@ -91,6 +94,7 @@ public class PuzzlePiece : MonoBehaviour
 
         if (sound != null) sound.Play();
         if (particle != null) particle.Play();
+        if (outline != null) outline.enabled = true;
     }
 
 
