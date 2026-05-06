@@ -34,7 +34,7 @@ namespace OnBoarding
 
         public void Show()
         {
-            gameObject.SetActive(true);;
+            gameObject.SetActive(true);
         }
 
         public void OnGazeStay()
