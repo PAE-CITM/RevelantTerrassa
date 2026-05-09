@@ -19461,6 +19461,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b1be989e2d2af46982793bea2a9c6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: OnBoarding::OnBoarding.ScreenFader
+  fadeOnAwake: 0
+  autoFadeDuration: 3
 --- !u!1 &1620229683
 GameObject:
   m_ObjectHideFlags: 0
@@ -23852,8 +23854,9 @@ GameObject:
   - component: {fileID: 1936716239}
   - component: {fileID: 1936716238}
   - component: {fileID: 1936716237}
+  - component: {fileID: 1936716241}
   m_Layer: 0
-  m_Name: StartLocationIndicator
+  m_Name: "Phase4_GoPla\xE7a"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23874,11 +23877,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8321685774571456786, guid: 9e1dc1c14313460d872de39e35129b39, type: 3}
 --- !u!23 &1936716238
@@ -23946,12 +23949,26 @@ Transform:
   m_GameObject: {fileID: 1936716236}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.01, z: 0}
+  m_LocalPosition: {x: -0.597, y: 0.01, z: -0.076}
   m_LocalScale: {x: 0.5, y: 0.1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1936716241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936716236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe21f4a30305b734f9ab857da51c460b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OnBoarding::OnBoarding.OnBoardingGoPlaza
+  interactionZone: {fileID: 1936716237}
+  screenFader: {fileID: 1617902908}
 --- !u!1 &1951303902
 GameObject:
   m_ObjectHideFlags: 0
@@ -26141,10 +26158,10 @@ SceneRoots:
   - {fileID: 418554252}
   - {fileID: 282561303}
   - {fileID: 1415920989}
-  - {fileID: 1936716240}
   - {fileID: 1109823934}
   - {fileID: 230598266}
   - {fileID: 2032421958}
   - {fileID: 976829183}
   - {fileID: 1423113539}
   - {fileID: 355088659}
+  - {fileID: 1936716240}
