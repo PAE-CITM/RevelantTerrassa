@@ -7,14 +7,10 @@ namespace OnBoarding
 {
     public class OnBoardingGoPlaza : MonoBehaviour
     {
-
         public event Action OnPhaseFourCompleted;
 
         [SerializeField] 
         private MeshCollider interactionZone;
-
-        [SerializeField]
-        private ScreenFader screenFader;
 
         private bool isFading = false;
 
@@ -40,24 +36,23 @@ namespace OnBoarding
         private IEnumerator FadeAndLoadScene()
         {
             isFading = true;
-            if (screenFader != null)
+
+            ScreenFader fader = ScreenFader.Instance;
+
+            if (fader != null)
             {
-                yield return StartCoroutine(screenFader.FadeOutRoutine(3f));
+                yield return StartCoroutine(fader.FadeOutRoutine(3f));
+                fader.PrepareForSceneTransition();
             }
-            else
-            {
-                Debug.LogWarning("ScreenFader no está asignado. Cargando escena directamente.");
-            }
-            // Cargar de forma asíncrona para evitar el "reloj de arena" y el congelamiento
+
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Plaça Vella v1");
-            asyncLoad.allowSceneActivation = false; // No activamos la escena hasta que termine de cargar
+            asyncLoad.allowSceneActivation = false;
 
             while (asyncLoad.progress < 0.9f)
             {
                 yield return null;
             }
 
-            // Una vez cargada en segundo plano, la activamos
             asyncLoad.allowSceneActivation = true;
         }
 

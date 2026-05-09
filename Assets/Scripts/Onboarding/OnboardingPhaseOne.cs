@@ -9,7 +9,6 @@ namespace OnBoarding
         [SerializeField] private PhotoInteractable[] photos;
         [SerializeField] private float delayBetweenPhotos = 0.5f;
 
-        [SerializeField] private ScreenFader screenFader;
         [SerializeField] private float roomFadeDuration = 2f;
         [SerializeField] private float initialDelay = 1f;
 
@@ -35,9 +34,10 @@ namespace OnBoarding
         private IEnumerator RunPhaseOne()
         {
             yield return new WaitForSeconds(initialDelay);
-            
-            if (screenFader != null)
-                yield return StartCoroutine(screenFader.FadeInRoutine(roomFadeDuration));
+
+            ScreenFader fader = ScreenFader.Instance;
+            if (fader != null)
+                yield return StartCoroutine(fader.FadeInRoutine(roomFadeDuration));
 
             for (int i = 0; i < photos.Length; i++)
             {
