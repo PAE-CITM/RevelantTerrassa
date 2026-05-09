@@ -16,13 +16,20 @@ namespace OnBoarding
         [SerializeField] private AudioSource audioSource;
         [SerializeField] private AudioClip photoAppearClip;
 
-        public event Action OnPhaseCompleted;
+        [SerializeField] private GameObject phase2;
+
+        public event Action OnPhase1Completed;
 
         private bool currentPhotoCompleted;
 
         private void Start()
         {
             StartCoroutine(RunPhaseOne());
+        }
+
+        private void Awake()
+        {
+            OnPhase1Completed += StartPhase2;
         }
 
         private IEnumerator RunPhaseOne()
@@ -49,12 +56,17 @@ namespace OnBoarding
                 yield return new WaitForSeconds(delayBetweenPhotos);
             }
 
-            OnPhaseCompleted?.Invoke();
+            OnPhase1Completed?.Invoke();
         }
 
         private void HandlePhotoCompleted()
         {
             currentPhotoCompleted = true;
+        }
+
+        private void StartPhase2()
+        {
+            phase2.SetActive(true);
         }
     }
 }

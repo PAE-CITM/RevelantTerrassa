@@ -2,7 +2,8 @@
     "name": "OnBoarding",
     "rootNamespace": "OnBoarding",
     "references": [
-        "Unity.ugui"
+        "Unity.ugui",
+        "Oculus.Interaction"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

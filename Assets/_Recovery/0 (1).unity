@@ -7679,10 +7679,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6d0f4a613077049ac4e837af1d75c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraRollReceptacle
-  phase3: {fileID: 1423113538}
   cameraRollName: CameraRoll
   delay: 1.5
   snapPoint: {fileID: 554982161}
+  OnCameraRollInserted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1808448207}
+        m_TargetAssemblyTypeName: OnBoarding.rolltest, OnBoarding
+        m_MethodName: printTest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &557745383
 GameObject:
   m_ObjectHideFlags: 0
@@ -17199,7 +17213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1423113539
 Transform:
   m_ObjectHideFlags: 0
