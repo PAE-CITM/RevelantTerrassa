@@ -1,6 +1,7 @@
 using Oculus.Interaction;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class PuzzlePiece : MonoBehaviour
 {
@@ -31,6 +32,11 @@ public class PuzzlePiece : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        StartCoroutine(CheckInitialSnap());
+    }
+
     void Update()
     {
         if (isLocked) return;
@@ -38,6 +44,19 @@ public class PuzzlePiece : MonoBehaviour
         if (Keyboard.current != null && Keyboard.current.sKey.wasPressedThisFrame)
         {
             TryManualSnap();
+        }
+    }
+
+    private IEnumerator CheckInitialSnap()
+    {
+        yield return new WaitForFixedUpdate();
+
+        if (isLocked) yield break;
+
+        if (node != null && node.isMatched && node.targetNode != null)
+        {
+            SnapToPlace(node);
+            Debug.Log($"[PuzzlePiece] {gameObject.name} s'ha col·locat automàticament a l'inici.");
         }
     }
 
