@@ -23,7 +23,7 @@ PrefabInstance:
     - target: {fileID: 1941059353534118250, guid: 0a011400d46223f40a0a6e14a2ac0a86, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 3406263888392756942, guid: 48ea484c05a429641b165805ecaebd91, type: 3}
+      objectReference: {fileID: 3406263888392756942, guid: 258c07c9d859f1841960bfdce180c5e5, type: 3}
     - target: {fileID: 3382096293740853870, guid: 0a011400d46223f40a0a6e14a2ac0a86, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.05
@@ -86,27 +86,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5438614894169215428, guid: 0a011400d46223f40a0a6e14a2ac0a86, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.79
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5438614894169215428, guid: 0a011400d46223f40a0a6e14a2ac0a86, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.79
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5438614894169215428, guid: 0a011400d46223f40a0a6e14a2ac0a86, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.79
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5438614894169215428, guid: 0a011400d46223f40a0a6e14a2ac0a86, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.21
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5438614894169215428, guid: 0a011400d46223f40a0a6e14a2ac0a86, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5438614894169215428, guid: 0a011400d46223f40a0a6e14a2ac0a86, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.11
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 5438614894169215428, guid: 0a011400d46223f40a0a6e14a2ac0a86, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -135,7 +135,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6078942561756847593}
-  m_Mesh: {fileID: 3406263888392756942, guid: 48ea484c05a429641b165805ecaebd91, type: 3}
+  m_Mesh: {fileID: 3406263888392756942, guid: 258c07c9d859f1841960bfdce180c5e5, type: 3}
 --- !u!23 &9094141598939316527
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -161,7 +161,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7060938831881569340, guid: 48ea484c05a429641b165805ecaebd91, type: 3}
+  - {fileID: 7060938831881569340, guid: 258c07c9d859f1841960bfdce180c5e5, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
