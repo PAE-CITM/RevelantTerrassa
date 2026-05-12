@@ -15,6 +15,9 @@ namespace OnBoarding
         public Transform snapPoint;
         public event Action OnCameraRollInserted;
 
+        [SerializeField] private narratorAudio narrator;
+        public AudioClip narratorAudio;
+
 
         private bool isInserted = false;
 
@@ -25,6 +28,7 @@ namespace OnBoarding
 
         private void StartPhase3()
         {
+            narrator.PlayClip(narratorAudio);
             phase3.SetActive(true);
         }
 

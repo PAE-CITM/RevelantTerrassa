@@ -42,7 +42,9 @@ namespace OnBoarding
 
         private void TriggerPhaseFour()
         {
+
             phase4.SetActive(true);
+            
             if (!isFading)
             {
                 StartCoroutine(FadeAndLoadScene());

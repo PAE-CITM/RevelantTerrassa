@@ -19,6 +19,9 @@ namespace OnBoarding
 
         public event Action OnPhase1Completed;
 
+        [SerializeField] private narratorAudio narrator;
+        public AudioClip narratorAudio;
+
         private bool currentPhotoCompleted;
 
         private void Start()
@@ -66,7 +69,10 @@ namespace OnBoarding
 
         private void StartPhase2()
         {
+     
+            narrator.PlayClip(narratorAudio);
             phase2.SetActive(true);
+            
         }
     }
 }

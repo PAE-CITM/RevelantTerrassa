@@ -4347,13 +4347,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7407ace7ed254084dacc1982e557b3d3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 554982161}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7407ace7ed254084dacc1982e557b3d3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1139267353}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7407ace7ed254084dacc1982e557b3d3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1139267352}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7407ace7ed254084dacc1982e557b3d3, type: 3}
 --- !u!4 &317256283 stripped
 Transform:
@@ -5488,7 +5482,7 @@ Transform:
   m_GameObject: {fileID: 418554247}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.142}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7574,8 +7568,6 @@ MonoBehaviour:
   cameraRollName: CameraRoll
   delay: 1.5
   snapPoint: {fileID: 554982161}
-  narrator: {fileID: 771325087}
-  narratorAudio: {fileID: 8300000, guid: 91fb39ec6eff5d144a1cbbdc6f3dd77a, type: 3}
 --- !u!1 &557745383
 GameObject:
   m_ObjectHideFlags: 0
@@ -9961,7 +9953,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCVoiceSequence
   audioSource: {fileID: 771325088}
-  firstClip: {fileID: 8300000, guid: f641ba62e8a5fbc449855ce2cc262c28, type: 3}
+  firstClip: {fileID: 8300000, guid: a0c5da70ce5055e4989dd46e6f3371fb, type: 3}
+  secondClip: {fileID: 8300000, guid: f641ba62e8a5fbc449855ce2cc262c28, type: 3}
+  thirdClip: {fileID: 0}
 --- !u!82 &771325088
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14059,46 +14053,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138566072}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1139267351 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7407ace7ed254084dacc1982e557b3d3, type: 3}
-  m_PrefabInstance: {fileID: 317256282}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1139267352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139267351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 019f53c17d7169b40bf4a026e905cf8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Audioonaproch
-  narrator: {fileID: 771325087}
-  narratorAudio: {fileID: 8300000, guid: ee2bb7e2491b690499f123a26161930f, type: 3}
---- !u!65 &1139267353
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139267351}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 0.71, z: 2.55}
-  m_Center: {x: -0.0008525029, y: -0.047617197, z: 0.0032195959}
 --- !u!1 &1141011324
 GameObject:
   m_ObjectHideFlags: 0
@@ -24552,7 +24506,7 @@ MonoBehaviour:
   photoAppearClip: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
   phase2: {fileID: 976829182}
   narrator: {fileID: 771325087}
-  narratorAudio: {fileID: 8300000, guid: f97be1baf0a31de4e9cb1a3ad8e3c15e, type: 3}
+  audio: {fileID: 8300000, guid: f97be1baf0a31de4e9cb1a3ad8e3c15e, type: 3}
 --- !u!1 &2035854317
 GameObject:
   m_ObjectHideFlags: 0
