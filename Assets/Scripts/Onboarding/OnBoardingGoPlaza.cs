@@ -14,9 +14,19 @@ namespace OnBoarding
 
         private bool isFading = false;
 
+        [SerializeField]
+        private PuzzleManager puzzleManager;
+
+
+        [SerializeField]
+        private GameObject phase4;
+
         public void Awake()
         {
-            OnPhaseFourCompleted += TriggerPhaseFour;  
+            OnPhaseFourCompleted += TriggerPhaseFour; 
+
+           puzzleManager.OnPuzzleCompleted += TriggerPhaseFour;
+
 
             if (interactionZone != null && interactionZone.gameObject != this.gameObject)
             {
@@ -25,8 +35,14 @@ namespace OnBoarding
             }
         }
 
+        private void OnDestroy()
+        {
+            OnPhaseFourCompleted -= TriggerPhaseFour;  
+        }
+
         private void TriggerPhaseFour()
         {
+            phase4.SetActive(true);
             if (!isFading)
             {
                 StartCoroutine(FadeAndLoadScene());

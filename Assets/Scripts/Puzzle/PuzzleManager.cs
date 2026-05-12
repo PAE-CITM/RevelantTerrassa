@@ -1,11 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 public class PuzzleManager : MonoBehaviour
 {
     private List<ConnectionNode> sockets = new List<ConnectionNode>();
     private bool puzzleFinished = false;
 
+    public event Action OnPuzzleCompleted;
     void Start()
     {
         ConnectionNode[] foundNodes = GetComponentsInChildren<ConnectionNode>();
@@ -40,5 +42,6 @@ public class PuzzleManager : MonoBehaviour
     void WinGame()
     {
         Debug.Log($"<color=green><b>PUZZLE {gameObject.name} ACABAT!</b></color>");
+        OnPuzzleCompleted?.Invoke();
     }
 }

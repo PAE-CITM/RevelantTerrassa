@@ -1,4 +1,4 @@
-﻿//
+//
 //  Outline.cs
 //  QuickOutline
 //
@@ -187,6 +187,12 @@ public class Outline : MonoBehaviour {
         continue;
       }
 
+      // Skip non-readable meshes
+      if (!meshFilter.sharedMesh.isReadable) {
+        Debug.LogWarning("Outline: Skipping non-readable mesh '" + meshFilter.sharedMesh.name + "' on " + meshFilter.gameObject.name + ". Enable Read/Write in the model import settings.", meshFilter.gameObject);
+        continue;
+      }
+
       // Retrieve or generate smooth normals
       var index = bakeKeys.IndexOf(meshFilter.sharedMesh);
       var smoothNormals = (index >= 0) ? bakeValues[index].data : SmoothNormals(meshFilter.sharedMesh);
@@ -207,6 +213,12 @@ public class Outline : MonoBehaviour {
 
       // Skip if UV3 has already been reset
       if (!registeredMeshes.Add(skinnedMeshRenderer.sharedMesh)) {
+        continue;
+      }
+
+      // Skip non-readable meshes
+      if (!skinnedMeshRenderer.sharedMesh.isReadable) {
+        Debug.LogWarning("Outline: Skipping non-readable skinned mesh '" + skinnedMeshRenderer.sharedMesh.name + "' on " + skinnedMeshRenderer.gameObject.name + ". Enable Read/Write in the model import settings.", skinnedMeshRenderer.gameObject);
         continue;
       }
 
