@@ -7978,7 +7978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6d0f4a613077049ac4e837af1d75c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraRollReceptacle
-  phase3: {fileID: 0}
+  phase3: {fileID: 1590666351}
   cameraRollName: CameraRoll
   delay: 1.5
   snapPoint: {fileID: 554982161}
@@ -19591,6 +19591,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 697257502}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1590666351 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2918629755091459448, guid: e56d6d8e6e650234d8169ee5b4f3fee3, type: 3}
+  m_PrefabInstance: {fileID: 730018498}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1597274016
 GameObject:
   m_ObjectHideFlags: 0
