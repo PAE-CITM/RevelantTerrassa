@@ -9702,6 +9702,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1239824131322508964, guid: e56d6d8e6e650234d8169ee5b4f3fee3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2918629755091459448, guid: e56d6d8e6e650234d8169ee5b4f3fee3, type: 3}
       propertyPath: m_Name
       value: Phase3_Puzzle
@@ -9710,10 +9714,48 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3020603446724488097, guid: e56d6d8e6e650234d8169ee5b4f3fee3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5154902334968303220, guid: e56d6d8e6e650234d8169ee5b4f3fee3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237990546417124432, guid: e56d6d8e6e650234d8169ee5b4f3fee3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5732866323772028758, guid: e56d6d8e6e650234d8169ee5b4f3fee3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6166399837354304330, guid: e56d6d8e6e650234d8169ee5b4f3fee3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494573913931651060, guid: e56d6d8e6e650234d8169ee5b4f3fee3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057156610141379455, guid: e56d6d8e6e650234d8169ee5b4f3fee3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477139795334575087, guid: e56d6d8e6e650234d8169ee5b4f3fee3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2918629755091459448, guid: e56d6d8e6e650234d8169ee5b4f3fee3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1590666354}
+    - targetCorrespondingSourceObject: {fileID: 2918629755091459448, guid: e56d6d8e6e650234d8169ee5b4f3fee3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1590666353}
   m_SourcePrefab: {fileID: 100100000, guid: e56d6d8e6e650234d8169ee5b4f3fee3, type: 3}
 --- !u!114 &730018499 stripped
 MonoBehaviour:
@@ -19596,6 +19638,41 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2918629755091459448, guid: e56d6d8e6e650234d8169ee5b4f3fee3, type: 3}
   m_PrefabInstance: {fileID: 730018498}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1590666353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590666351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 019f53c17d7169b40bf4a026e905cf8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audioonaproch
+  narrator: {fileID: 771325087}
+  narratorAudio: {fileID: 8300000, guid: 635581d3e6459454ab867be239e6a732, type: 3}
+--- !u!65 &1590666354
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590666351}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.76507, y: 1.0870711, z: 2.8262303}
+  m_Center: {x: -0.3861513, y: 0.04353553, z: 1.7993659}
 --- !u!1 &1597274016
 GameObject:
   m_ObjectHideFlags: 0
