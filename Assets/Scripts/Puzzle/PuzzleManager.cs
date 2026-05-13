@@ -1,13 +1,15 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System;
+using UnityEngine.Events;
 
 public class PuzzleManager : MonoBehaviour
 {
     private List<ConnectionNode> sockets = new List<ConnectionNode>();
     private bool puzzleFinished = false;
 
-    public event Action OnPuzzleCompleted;
+    // UnityEvent for rigging within the Inspector
+    public UnityEvent OnPuzzleCompleted;
     void Start()
     {
         ConnectionNode[] foundNodes = GetComponentsInChildren<ConnectionNode>();

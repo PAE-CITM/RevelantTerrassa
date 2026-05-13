@@ -23,9 +23,9 @@ namespace OnBoarding
 
         public void Awake()
         {
-            OnPhaseFourCompleted += TriggerPhaseFour; 
+            OnPhaseFourCompleted += TriggerPhaseFour;
 
-           puzzleManager.OnPuzzleCompleted += TriggerPhaseFour;
+            puzzleManager.OnPuzzleCompleted.AddListener(TriggerPhaseFour);
 
 
             if (interactionZone != null && interactionZone.gameObject != this.gameObject)
@@ -38,6 +38,7 @@ namespace OnBoarding
         private void OnDestroy()
         {
             OnPhaseFourCompleted -= TriggerPhaseFour;  
+            puzzleManager?.OnPuzzleCompleted.RemoveListener(TriggerPhaseFour);
         }
 
         private void TriggerPhaseFour()
