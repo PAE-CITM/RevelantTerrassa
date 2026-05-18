@@ -1958,7 +1958,8 @@ PrefabInstance:
       value: ohTomate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -1285565145191111811, guid: 782b5e2e0d7712f449aca17e3c637829, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 782b5e2e0d7712f449aca17e3c637829, type: 3}
