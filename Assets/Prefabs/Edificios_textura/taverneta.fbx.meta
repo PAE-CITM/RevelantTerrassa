@@ -3,7 +3,32 @@ guid: d26369635a20890409eabcdf119bf39f
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tav_001
+    second: {fileID: 2100000, guid: a1db399da53d80f44903625c3425bcbd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tav_002
+    second: {fileID: 2100000, guid: 0cbdd22be1c3a7d4a9ebe20e5a0c0a6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tav_003
+    second: {fileID: 2100000, guid: 888dbffef81f4a646b12c11dcc2d044c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tav_004
+    second: {fileID: 2100000, guid: cb11c3b996c06b647aa381f6ccfbdc62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tav_005
+    second: {fileID: 2100000, guid: f828d21b8ba1cef42813cb2f8039e6b1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
