@@ -1,23 +1,31 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Threading.Tasks;
+using OnBoarding;
 
 public class MenuController : MonoBehaviour
 {
     public void StartGame()
     {
-        StartCoroutine(LoadScene());
+        LoadScene();
     }
 
-    IEnumerator LoadScene()
+    async Task LoadScene()
     {
-        yield return FadeManager.Instance.FadeOut();
+        await ScreenFader.Instance.FadeAsync(0.0f, 1.0f, 3);
         SceneManager.LoadScene("OnBoarding");
     }
 
     public void QuitGame()
     {
-        Application.Quit();
+        QuitGameAsync();
+    }
+
+    async Task QuitGameAsync()
+    {
+        await ScreenFader.Instance.FadeAsync(0.0f, 1.0f, 3);
         Debug.Log("Salir del juego");
+        Application.Quit();
     }
 }

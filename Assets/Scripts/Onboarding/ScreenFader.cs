@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -30,8 +32,7 @@ namespace OnBoarding
         {
             if (Instance != null && Instance != this)
             {
-                Destroy(transform.root.gameObject);
-                return;
+                Destroy(Instance.transform.root.gameObject);
             }
 
             Instance = this;
@@ -54,7 +55,12 @@ namespace OnBoarding
         private void Start()
         {
             if (fadeOnAwake)
-                StartCoroutine(FadeInRoutine(autoFadeDuration));
+                FadeAsync(1.0f, 0.0f,autoFadeDuration);
+        }
+
+        private void OnDestroy()
+        {
+            Instance = null;
         }
 
         private void LateUpdate()
@@ -86,16 +92,32 @@ namespace OnBoarding
             StartCoroutine(FadeInAfterSceneLoad());
         }
 
-        private IEnumerator FadeInAfterSceneLoad()
+        private async void FadeInAsyncAfterSceneLoad()
         {
             SetAlpha(1f);
 
-            while (Camera.main == null)
+            // Ideally this gets called ONCE (similar performance penalty to calling GetComponent() repeatedly)
+            while (!Camera.main)
+                await Task.Delay(50);
+            
+
+            FindCamera();
+            await Task.Yield();
+            FadeAsync(1.0f, 0.0f,sceneFadeInDuration > 0f ? sceneFadeInDuration : 5f);
+        }
+
+        private IEnumerator FadeInAfterSceneLoad()
+        {
+            SetAlpha(1f);
+            
+            // Ideally this gets called ONCE (similar performance penalty to calling GetComponent() repeatedly)
+            while (!Camera.main)
                 yield return null;
+            
 
             FindCamera();
             yield return null;
-            yield return FadeInRoutine(sceneFadeInDuration > 0f ? sceneFadeInDuration : 5f);
+            FadeAsync(1.0f, 0.0f,sceneFadeInDuration > 0f ? sceneFadeInDuration : 5f);
         }
 
         public void PrepareForSceneTransition()
@@ -135,6 +157,21 @@ namespace OnBoarding
         {
             canvas.transform.position = targetCamera.transform.position + targetCamera.transform.forward * distanceFromCamera;
             canvas.transform.rotation = targetCamera.transform.rotation;
+        }
+        
+        public async Task FadeAsync(float fromAlpha, float toAlpha, float duration)
+        {
+            SetAlpha(fromAlpha);
+            float elapsed = 0f;
+
+            while (elapsed < duration)
+            {
+                elapsed += Time.deltaTime;
+                SetAlpha(Mathf.Lerp(fromAlpha, toAlpha, elapsed / duration));
+                await Task.Yield();
+            }
+
+            SetAlpha(toAlpha);
         }
 
         public IEnumerator FadeInRoutine(float duration)
