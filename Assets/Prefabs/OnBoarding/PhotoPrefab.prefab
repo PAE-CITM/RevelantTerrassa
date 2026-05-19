@@ -113,7 +113,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 15, y: 15, z: 15}
+  m_Size: {x: 30, y: 30, z: 30}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-1355952578518233812
 MonoBehaviour:
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: OnBoarding::OnBoarding.PhotoInteractable
   photoRenderer: {fileID: 7821845075656866872}
   fadeDuration: 0.5
-  requiredLookTime: 0.5
+  requiredLookTime: 0.2
   debugSkipKey: 282
 --- !u!1 &4380757343211971466
 GameObject:

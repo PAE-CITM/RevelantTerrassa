@@ -18,12 +18,31 @@ namespace OnBoarding
         [SerializeField] private narratorAudio narrator;
         public AudioClip narratorAudio;
 
+        [Header("Hand Touch Trigger Settings")]
+        [SerializeField] private Collider handTouchTrigger;
+
 
         private bool isInserted = false;
+        private bool isReadyForTouch = false;
 
         private void Awake()
         {
             OnCameraRollInserted += StartPhase3;
+        }
+
+        private void Start()
+        {
+            if (handTouchTrigger != null)
+            {
+                handTouchTrigger.gameObject.SetActive(false);
+
+                TriggerListener listener = handTouchTrigger.GetComponent<TriggerListener>();
+                if (listener == null)
+                {
+                    listener = handTouchTrigger.gameObject.AddComponent<TriggerListener>();
+                }
+                listener.onTriggerEntered += HandleHandTouch;
+            }
         }
 
         private void StartPhase3()
@@ -40,6 +59,11 @@ namespace OnBoarding
             if (other.gameObject.name.Contains(cameraRollName))
             {
                 isInserted = true;
+                isReadyForTouch = false;
+                if (handTouchTrigger != null)
+                {
+                    handTouchTrigger.gameObject.SetActive(true);
+                }
                 StartCoroutine(HandleInsertion(other.gameObject));
             }
         }
@@ -71,7 +95,69 @@ namespace OnBoarding
 
             yield return new WaitForSeconds(delay);
 
-            OnCameraRollInserted?.Invoke();
+            if (handTouchTrigger == null)
+            {
+                OnCameraRollInserted?.Invoke();
+            }
+            else
+            {
+                isReadyForTouch = true;
+            }
+        }
+
+        private void HandleHandTouch(Collider other)
+        {
+            if (!isInserted || !isReadyForTouch) return;
+
+            if (IsHand(other))
+            {
+                if (handTouchTrigger != null)
+                {
+                    handTouchTrigger.gameObject.SetActive(false);
+                }
+
+                OnCameraRollInserted?.Invoke();
+            }
+        }
+
+        private bool IsHand(Collider other)
+        {
+            if (other == null) return false;
+
+            string nameLower = other.name.ToLower();
+            string tagLower = other.tag.ToLower();
+
+            if (nameLower.Contains("hand") || nameLower.Contains("finger") || nameLower.Contains("palm") ||
+                nameLower.Contains("index") || nameLower.Contains("thumb") || nameLower.Contains("contact"))
+            {
+                return true;
+            }
+
+            if (tagLower.Contains("hand") || tagLower.Contains("player"))
+            {
+                return true;
+            }
+
+            Transform current = other.transform;
+            while (current != null)
+            {
+                Component[] components = current.GetComponents<Component>();
+                if (components != null)
+                {
+                    for (int i = 0; i < components.Length; i++)
+                    {
+                        if (components[i] == null) continue;
+                        string typeName = components[i].GetType().Name;
+                        if (typeName.Contains("Hand") || typeName.Contains("OVRHand") || typeName.Contains("HandRef"))
+                        {
+                            return true;
+                        }
+                    }
+                }
+                current = current.parent;
+            }
+
+            return false;
         }
     }
 }
