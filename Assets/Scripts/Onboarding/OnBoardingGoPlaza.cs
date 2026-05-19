@@ -77,7 +77,10 @@ namespace OnBoarding
 
         private void OnTriggerEnter(Collider other)
         {    
-            OnPhaseFourCompleted?.Invoke();
+            if (other.CompareTag("Player"))
+            {
+                OnPhaseFourCompleted?.Invoke();
+            }
         }
     }
 
