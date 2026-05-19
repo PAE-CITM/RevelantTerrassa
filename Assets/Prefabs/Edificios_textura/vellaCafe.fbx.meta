@@ -3,7 +3,42 @@ guid: 446ad5701c81e764c89a1455f8a6d110
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VeC_001.001
+    second: {fileID: 2100000, guid: 17407eb781bd7b64f8431778e2f5882f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VeC_002.001
+    second: {fileID: 2100000, guid: baadf219188861f48bf22aed0f5ee498, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VeC_003.001
+    second: {fileID: 2100000, guid: 1b1a7482bbacb854a99ed9f55d18cc33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VeC_004.001
+    second: {fileID: 2100000, guid: 5e60d09afa83f7a43ad6216d7ec61f8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VeC_005.001
+    second: {fileID: 2100000, guid: da193c360d6f2f647a5fca648e29bef3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VeC_006.001
+    second: {fileID: 2100000, guid: 7966e2a94e2d0b14d992a61cf01bc06c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VeC_007.001
+    second: {fileID: 2100000, guid: afb40550537eb614d949a12865ac5ad8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
