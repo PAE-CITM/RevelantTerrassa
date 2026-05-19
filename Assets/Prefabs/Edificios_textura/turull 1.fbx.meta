@@ -3,7 +3,82 @@ guid: fb2c9a4dcee782644989e8e788fd2dc1
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tur_002.001
+    second: {fileID: 2100000, guid: abcaa5dc7f486ed44bc541543727ab97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tur_003.001
+    second: {fileID: 2100000, guid: 4cd0a98d1918b1c45840145d35e39ded, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tur_004.001
+    second: {fileID: 2100000, guid: ce6ca6e901d62ee4282f502c233e2439, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tur_005.001
+    second: {fileID: 2100000, guid: 1b9f8ff13417c3c4c8c90475e7489478, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tur_006.001
+    second: {fileID: 2100000, guid: d9b91b1b965cf3c40906d4bae9c8ab85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tur_008.001
+    second: {fileID: 2100000, guid: ade764bf26f689b4187746abb159e42f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tur_009.001
+    second: {fileID: 2100000, guid: cd2cb202aa1a55b4ba2690b316f13c33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tur_010.001
+    second: {fileID: 2100000, guid: cd26b3d04e0b618449b9ef90ac2bf432, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tur_011.001
+    second: {fileID: 2100000, guid: 6280f6e877f602043acac43296f80cd1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tur_012.001
+    second: {fileID: 2100000, guid: 5a4ca324bb3e34e4f9d33595f4c81fba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tur_013.001
+    second: {fileID: 2100000, guid: 0d21f11f0a72b2a49a39e6b180e6b33c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tur_014.001
+    second: {fileID: 2100000, guid: 7bf840154d9ebf245a4964ab07adb35b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tur_015.001
+    second: {fileID: 2100000, guid: 91006c45d39411042a420d4111553606, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tur_016.001
+    second: {fileID: 2100000, guid: d00585c7d14a8924e90083b47627de11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tur_017.001
+    second: {fileID: 2100000, guid: a26f40a86a8b3724299c0c3b4d8747be, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
