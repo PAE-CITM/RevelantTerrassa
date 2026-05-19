@@ -5092,7 +5092,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2918629755091459448, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3149885842163595690, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.size
@@ -7538,7 +7538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 167697182060691332, guid: 5290c4c394950e647884e59e6b05dd1a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6967315897167195234, guid: 5290c4c394950e647884e59e6b05dd1a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9502,7 +9502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 167697182060691332, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2280026301524606164, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.size
@@ -9660,7 +9660,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e5e24680b3322c942bd314ff92502fce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.56
+      value: -15.54
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e5e24680b3322c942bd314ff92502fce, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9668,7 +9668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e5e24680b3322c942bd314ff92502fce, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -21.76
+      value: -20.766
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e5e24680b3322c942bd314ff92502fce, type: 3}
       propertyPath: m_LocalRotation.w
