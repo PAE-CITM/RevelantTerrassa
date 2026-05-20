@@ -8364,6 +8364,77 @@ Transform:
   - {fileID: 2841028431701094824}
   m_Father: {fileID: 543450652449396178}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1718351223
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.959797
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -21.98
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
+      propertyPath: m_Name
+      value: Idle_poli
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 068f6c9370725cd43b2176ebc02e0a58, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
+        'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
+        'mixamorig:LeftHandPinky2'\n\tTransform 'mixamorig:RightHandRing2'\n\tTransform
+        'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform
+        'mixamorig:RightArm'\n\tand more ...\n\tFrom animation clip 'mixamo.com'"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
 --- !u!1001 &1738794187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11480,6 +11551,21 @@ PrefabInstance:
     - {fileID: -1749435016463932502, guid: 46f7bb8156c74c94cb55fe6c1b7b83c7, type: 3}
     - {fileID: -5514973854646914966, guid: 46f7bb8156c74c94cb55fe6c1b7b83c7, type: 3}
     - {fileID: 6562889748348933850, guid: 46f7bb8156c74c94cb55fe6c1b7b83c7, type: 3}
+    - {fileID: 3564783574603935192, guid: 46f7bb8156c74c94cb55fe6c1b7b83c7, type: 3}
+    - {fileID: -4620282718447106903, guid: 46f7bb8156c74c94cb55fe6c1b7b83c7, type: 3}
+    - {fileID: 3587788796799408565, guid: 46f7bb8156c74c94cb55fe6c1b7b83c7, type: 3}
+    - {fileID: 7750397243111347764, guid: 46f7bb8156c74c94cb55fe6c1b7b83c7, type: 3}
+    - {fileID: 1784747260517925682, guid: 46f7bb8156c74c94cb55fe6c1b7b83c7, type: 3}
+    - {fileID: 6989972652074480914, guid: 46f7bb8156c74c94cb55fe6c1b7b83c7, type: 3}
+    - {fileID: -8277158053328706933, guid: 46f7bb8156c74c94cb55fe6c1b7b83c7, type: 3}
+    - {fileID: 9157943139577863650, guid: 46f7bb8156c74c94cb55fe6c1b7b83c7, type: 3}
+    - {fileID: 3672548509089925874, guid: 46f7bb8156c74c94cb55fe6c1b7b83c7, type: 3}
+    - {fileID: 7887587906704532359, guid: 46f7bb8156c74c94cb55fe6c1b7b83c7, type: 3}
+    - {fileID: -3167299574701864104, guid: 46f7bb8156c74c94cb55fe6c1b7b83c7, type: 3}
+    - {fileID: 4373755574485294491, guid: 46f7bb8156c74c94cb55fe6c1b7b83c7, type: 3}
+    - {fileID: 7290139105190669015, guid: 46f7bb8156c74c94cb55fe6c1b7b83c7, type: 3}
+    - {fileID: 8716696373277586248, guid: 46f7bb8156c74c94cb55fe6c1b7b83c7, type: 3}
+    - {fileID: 8653909006750398859, guid: 46f7bb8156c74c94cb55fe6c1b7b83c7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46f7bb8156c74c94cb55fe6c1b7b83c7, type: 3}
@@ -48137,3 +48223,4 @@ SceneRoots:
   - {fileID: 1812346101}
   - {fileID: 92438237}
   - {fileID: 2005417886}
+  - {fileID: 1718351223}
