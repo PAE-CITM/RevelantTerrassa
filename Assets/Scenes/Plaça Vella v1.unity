@@ -7637,6 +7637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fbx Clean
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: ed9b331a8916c1340b212868fc1f880c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 841a31bbea81cc049b6a075e46aae89f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
