@@ -9,7 +9,7 @@ namespace OnBoarding
         [SerializeField] private PhotoInteractable[] photos;
         [SerializeField] private float delayBetweenPhotos = 0.5f;
 
-        [SerializeField] private float roomFadeDuration = 2f;
+        [SerializeField] private float roomFadeDuration = 2.5f;
         [SerializeField] private float initialDelay = 1f;
 
         [SerializeField] private AudioSource audioSource;
@@ -26,6 +26,10 @@ namespace OnBoarding
 
         private void Start()
         {
+            if (ScreenFader.Instance != null)
+            {
+                ScreenFader.Instance.SetAlpha(1f);
+            }
             StartCoroutine(RunPhaseOne());
         }
 

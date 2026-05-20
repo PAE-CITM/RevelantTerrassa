@@ -13,13 +13,16 @@ public class narratorAudio : MonoBehaviour
 
     private void Start()
     {
-        
         if (audioSource == null)
             audioSource = GetComponent<AudioSource>();
 
-        PlayClip(firstClip);
+        StartCoroutine(PlayFirstClipWithDelay());
+    }
 
-        
+    private IEnumerator PlayFirstClipWithDelay()
+    {
+        yield return new WaitForSeconds(2.5f);
+        PlayClip(firstClip);
     }
 
    

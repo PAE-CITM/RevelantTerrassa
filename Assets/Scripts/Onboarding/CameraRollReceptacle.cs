@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Oculus.Interaction;
 namespace OnBoarding
 {
@@ -8,7 +9,7 @@ namespace OnBoarding
     {
         [SerializeField] private GameObject phase3;
 
-        public string cameraRollName = "CameraRoll";
+        [SerializeField] private List<GameObject> cameraRollObjects = new List<GameObject>();
 
         public float delay = 1.5f;
 
@@ -56,7 +57,22 @@ namespace OnBoarding
 
             if (isInserted) return;
 
-            if (other.gameObject.name.Contains(cameraRollName))
+            bool isValidCameraRoll = false;
+            GameObject matchedObject = null;
+
+            foreach (var allowedObject in cameraRollObjects)
+            {
+                if (allowedObject == null) continue;
+
+                if (other.gameObject == allowedObject || other.transform.IsChildOf(allowedObject.transform))
+                {
+                    isValidCameraRoll = true;
+                    matchedObject = allowedObject;
+                    break;
+                }
+            }
+
+            if (isValidCameraRoll && matchedObject != null)
             {
                 isInserted = true;
                 isReadyForTouch = false;
@@ -64,7 +80,7 @@ namespace OnBoarding
                 {
                     handTouchTrigger.gameObject.SetActive(true);
                 }
-                StartCoroutine(HandleInsertion(other.gameObject));
+                StartCoroutine(HandleInsertion(matchedObject));
             }
         }
 

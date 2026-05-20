@@ -25,7 +25,7 @@ namespace OnBoarding
         {
             OnPhaseFourCompleted += TriggerPhaseFour;
 
-            puzzleManager.OnPuzzleCompleted.AddListener(TriggerPhaseFour);
+            puzzleManager.OnPuzzleCompleted.AddListener(EnablePhaseFour);
 
 
             if (interactionZone != null && interactionZone.gameObject != this.gameObject)
@@ -38,14 +38,16 @@ namespace OnBoarding
         private void OnDestroy()
         {
             OnPhaseFourCompleted -= TriggerPhaseFour;  
-            puzzleManager?.OnPuzzleCompleted.RemoveListener(TriggerPhaseFour);
+            puzzleManager?.OnPuzzleCompleted.RemoveListener(EnablePhaseFour);
+        }
+
+        private void EnablePhaseFour()
+        {
+            phase4.SetActive(true);
         }
 
         private void TriggerPhaseFour()
         {
-
-            phase4.SetActive(true);
-            
             if (!isFading)
             {
                 StartCoroutine(FadeAndLoadScene());

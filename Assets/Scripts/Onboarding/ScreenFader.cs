@@ -32,7 +32,9 @@ namespace OnBoarding
         {
             if (Instance != null && Instance != this)
             {
-                Destroy(Instance.transform.root.gameObject);
+                transform.root.gameObject.SetActive(false);
+                Destroy(transform.root.gameObject);
+                return;
             }
 
             Instance = this;
@@ -41,6 +43,7 @@ namespace OnBoarding
             canvas = GetComponentInParent<Canvas>();
 
             transform.root.SetParent(null);
+            transform.root.localScale = Vector3.one;
             DontDestroyOnLoad(transform.root.gameObject);
 
             if (fadeOnAwake)
@@ -116,7 +119,9 @@ namespace OnBoarding
             
 
             FindCamera();
-            yield return null;
+            if (targetCamera != null)
+                FollowCamera();
+
             FadeAsync(1.0f, 0.0f,sceneFadeInDuration > 0f ? sceneFadeInDuration : 5f);
         }
 
@@ -139,8 +144,19 @@ namespace OnBoarding
             RectTransform rt = canvas.GetComponent<RectTransform>();
             rt.sizeDelta = new Vector2(15f, 15f);
             rt.localScale = Vector3.one;
+            rt.localPosition = Vector3.zero;
+            rt.localRotation = Quaternion.identity;
 
             canvas.sortingOrder = 999;
+
+            var overlays = canvas.GetComponents<MonoBehaviour>();
+            foreach (var comp in overlays)
+            {
+                if (comp != null && comp.GetType().Name.Contains("OVROverlay"))
+                {
+                    comp.enabled = false;
+                }
+            }
 
             CanvasScaler scaler = canvas.GetComponent<CanvasScaler>();
             if (scaler != null)
@@ -151,12 +167,18 @@ namespace OnBoarding
             imageRT.anchorMax = Vector2.one;
             imageRT.offsetMin = Vector2.zero;
             imageRT.offsetMax = Vector2.zero;
+            imageRT.localPosition = Vector3.zero;
+            imageRT.localRotation = Quaternion.identity;
+            imageRT.localScale = Vector3.one;
         }
 
         private void FollowCamera()
         {
-            canvas.transform.position = targetCamera.transform.position + targetCamera.transform.forward * distanceFromCamera;
-            canvas.transform.rotation = targetCamera.transform.rotation;
+            if (targetCamera != null)
+            {
+                canvas.transform.position = targetCamera.transform.position + targetCamera.transform.forward * distanceFromCamera;
+                canvas.transform.rotation = targetCamera.transform.rotation;
+            }
         }
         
         public async Task FadeAsync(float fromAlpha, float toAlpha, float duration)
@@ -204,7 +226,7 @@ namespace OnBoarding
             SetAlpha(1f);
         }
 
-        private void SetAlpha(float alpha)
+        public void SetAlpha(float alpha)
         {
             Color color = fadeImage.color;
             color.a = alpha;
