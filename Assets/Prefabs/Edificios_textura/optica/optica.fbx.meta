@@ -3,7 +3,62 @@ guid: 46f7bb8156c74c94cb55fe6c1b7b83c7
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opt_002.001
+    second: {fileID: 2100000, guid: 276388238baae0540b8ed3fa58dfb49f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opt_003.001
+    second: {fileID: 2100000, guid: 300339ef1180ac84fb542cd7414dedd8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opt_004.001
+    second: {fileID: 2100000, guid: 6e05dc262a76adc4f9d38622808ef143, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opt_005.001
+    second: {fileID: 2100000, guid: 3d084fcef545f054095d3138d9d08f67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opt_006.001
+    second: {fileID: 2100000, guid: d10a42e73b5757547a1ab8256e0c1c85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opt_007.001
+    second: {fileID: 2100000, guid: 01635f7993c9de14fb468d6eaf5f618d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opt_008.001
+    second: {fileID: 2100000, guid: a3633acdc1e197e4a8510c9f0928288c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opt_009.001
+    second: {fileID: 2100000, guid: 8b09a41a846e09a42b46041ad74f67b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opt_010.001
+    second: {fileID: 2100000, guid: 38eaa308b701edb4c81088e6de08c339, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opt_011.001
+    second: {fileID: 2100000, guid: 554ff3c8f3ddd5c42b195f73f75a86a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opt_012.001
+    second: {fileID: 2100000, guid: 519dbb72ac62c124eb4b7d406f7e5d36, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
