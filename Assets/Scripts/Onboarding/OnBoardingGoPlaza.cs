@@ -17,6 +17,8 @@ namespace OnBoarding
         [SerializeField]
         private PuzzleManager puzzleManager;
 
+        [SerializeField]
+        private NPCWaypointNavigator npcNavigator;
 
         [SerializeField]
         private GameObject phase4;
@@ -49,14 +51,31 @@ namespace OnBoarding
 
         private void EnablePhaseFour()
         {
-            phase4.SetActive(true);
-            ground_circle.SetActive(true);
-            StartCoroutine(DisablePhaseThreeDelayed());
+            StartCoroutine(DisablePhaseThreeDelayed(2.5f));
+
+            if (npcNavigator != null)
+            {
+                npcNavigator.OnArrivedAtWaypoint += ActivatePhase4;
+                npcNavigator.MoveToNext();
+            }
+            else
+            {
+                ActivatePhase4();
+            }
         }
 
-        private IEnumerator DisablePhaseThreeDelayed()
+        private void ActivatePhase4()
         {
-            yield return new WaitForSeconds(0.5f);
+            if (npcNavigator != null)
+                npcNavigator.OnArrivedAtWaypoint -= ActivatePhase4;
+
+            phase4.SetActive(true);
+            ground_circle.SetActive(true);
+        }
+
+        private IEnumerator DisablePhaseThreeDelayed(float delay)
+        {
+            yield return new WaitForSeconds(delay);
             if (phase3 != null)
             {
                 phase3.SetActive(false);
