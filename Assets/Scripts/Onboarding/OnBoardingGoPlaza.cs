@@ -21,6 +21,12 @@ namespace OnBoarding
         [SerializeField]
         private GameObject phase4;
 
+        [SerializeField]
+        private GameObject ground_circle;
+
+        [SerializeField]
+        private GameObject phase3;
+
         public void Awake()
         {
             OnPhaseFourCompleted += TriggerPhaseFour;
@@ -44,6 +50,17 @@ namespace OnBoarding
         private void EnablePhaseFour()
         {
             phase4.SetActive(true);
+            ground_circle.SetActive(true);
+            StartCoroutine(DisablePhaseThreeDelayed());
+        }
+
+        private IEnumerator DisablePhaseThreeDelayed()
+        {
+            yield return new WaitForSeconds(0.5f);
+            if (phase3 != null)
+            {
+                phase3.SetActive(false);
+            }
         }
 
         private void TriggerPhaseFour()

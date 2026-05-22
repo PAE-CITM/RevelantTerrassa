@@ -19,6 +19,9 @@ namespace OnBoarding
         [SerializeField] private narratorAudio narrator;
         public AudioClip narratorAudio;
 
+        [SerializeField]
+        private GameObject camera_circle;
+
         [Header("Hand Touch Trigger Settings")]
         [SerializeField] private Collider handTouchTrigger;
 
@@ -49,6 +52,7 @@ namespace OnBoarding
         private void StartPhase3()
         {
             narrator.PlayClip(narratorAudio);
+            camera_circle.SetActive(false);
             phase3.SetActive(true);
         }
 
