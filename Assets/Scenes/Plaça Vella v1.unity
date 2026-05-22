@@ -10265,6 +10265,10 @@ PrefabInstance:
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2352739321347100983, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6967315897167195234, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.30000007

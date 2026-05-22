@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puzzle_Piece10
       objectReference: {fileID: 0}
+    - target: {fileID: 501429008047839994, guid: 0a011400d46223f40a0a6e14a2ac0a86, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 8300000, guid: d1e934dcecf027041bd5a4ce8763d586, type: 3}
+    - target: {fileID: 501429008047839994, guid: 0a011400d46223f40a0a6e14a2ac0a86, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 373623329954213908}
     - target: {fileID: 808685053871305734, guid: 0a011400d46223f40a0a6e14a2ac0a86, type: 3}
       propertyPath: nodeID
       value: Pierce10
@@ -123,6 +131,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 9094141598939316527}
   m_SourcePrefab: {fileID: 100100000, guid: 0a011400d46223f40a0a6e14a2ac0a86, type: 3}
+--- !u!82 &373623329954213908 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7935280213009087365, guid: 0a011400d46223f40a0a6e14a2ac0a86, type: 3}
+  m_PrefabInstance: {fileID: 7723857254061935505}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6078942561756847593 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4570055426957809272, guid: 0a011400d46223f40a0a6e14a2ac0a86, type: 3}

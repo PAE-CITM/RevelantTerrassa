@@ -125,7 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a924ff6210a18f048ab7d6fc59378147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzlePiece
-  sound: {fileID: 7935280213009087365}
+  audioSource: {fileID: 7935280213009087365}
+  audioPlace: {fileID: 8300000, guid: d1e934dcecf027041bd5a4ce8763d586, type: 3}
+  audioGrab: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
   particle: {fileID: -6013830721655506836}
   isLocked: 0
 --- !u!114 &3999962873911427059
@@ -173,7 +175,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

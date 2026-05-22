@@ -10,7 +10,9 @@ public class PuzzlePiece : MonoBehaviour
     private ConnectionNode node;
 
     private Rigidbody rb;
-    public AudioSource sound;
+    public AudioSource audioSource;
+    public AudioClip audioPlace;
+    public AudioClip audioGrab;
     public ParticleSystem particle;
     private Outline outline;
 
@@ -30,6 +32,7 @@ public class PuzzlePiece : MonoBehaviour
         {
             grabbable.WhenPointerEventRaised += OnDrop;
         }
+        audioSource.clip = audioGrab;
     }
 
     void Start()
@@ -76,6 +79,7 @@ public class PuzzlePiece : MonoBehaviour
 
         if (node != null && node.isMatched && node.targetNode != null)
         {
+            audioSource.Play();
             SnapToPlace(node);
         }
     }
@@ -110,8 +114,8 @@ public class PuzzlePiece : MonoBehaviour
         {
             manager.CheckCompletion();
         }
-
-        if (sound != null) sound.Play();
+        audioSource.clip = audioPlace;
+        audioSource.Play();
         if (particle != null) particle.Play();
         if (outline != null) outline.enabled = true;
     }
