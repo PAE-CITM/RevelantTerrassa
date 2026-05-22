@@ -8,17 +8,21 @@ public class PuzzleManager : MonoBehaviour
     private List<ConnectionNode> sockets = new List<ConnectionNode>();
     private bool puzzleFinished = false;
 
+    public AudioSource audioSource;
+    public AudioClip audio;
+
     // UnityEvent for rigging within the Inspector
     public UnityEvent OnPuzzleCompleted;
     void Start()
     {
+        audioSource.clip = audio;
         ConnectionNode[] foundNodes = GetComponentsInChildren<ConnectionNode>();
         
         foreach (var node in foundNodes)
         {
             sockets.Add(node);
         }
-
+        
         Debug.Log($"[PuzzleManager] {gameObject.name} inicialitzat amb {sockets.Count} sockets.");
     }
 
@@ -43,6 +47,7 @@ public class PuzzleManager : MonoBehaviour
 
     void WinGame()
     {
+        audioSource.Play();
         Debug.Log($"<color=green><b>PUZZLE {gameObject.name} ACABAT!</b></color>");
         OnPuzzleCompleted?.Invoke();
     }
