@@ -26,6 +26,6 @@ public class MenuController : MonoBehaviour
     {
         await ScreenFader.Instance.FadeAsync(0.0f, 1.0f, 3);
         Debug.Log("Salir del juego");
-        Application.Quit();
+        Application.Quit(); // Ignored in editor
     }
 }
