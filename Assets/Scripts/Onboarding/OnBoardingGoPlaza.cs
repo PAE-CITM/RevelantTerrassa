@@ -35,6 +35,21 @@ namespace OnBoarding
         [SerializeField]
         private float rotationDuration = 0.5f;
 
+        [Header("Audio & Narrator")]
+        [SerializeField]
+        private narratorAudio narrator;
+
+        [SerializeField]
+        private AudioClip conclusionClip1;
+
+        [SerializeField]
+        private AudioClip conclusionClip2;
+
+        [SerializeField]
+        private AudioClip conclusionClip3;
+
+        private bool conclusionSequenceStarted = false;
+
         public void Awake()
         {
             OnPhaseFourCompleted += TriggerPhaseFour;
@@ -68,6 +83,20 @@ namespace OnBoarding
             else
             {
                 ActivatePhase4();
+            }
+
+            if (narrator != null && conclusionClip1 != null)
+            {
+                StartCoroutine(PlayClipDelayed(conclusionClip1, 1.5f));
+            }
+        }
+
+        private IEnumerator PlayClipDelayed(AudioClip clip, float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            if (narrator != null)
+            {
+                narrator.PlayClip(clip);
             }
         }
 
@@ -137,10 +166,31 @@ namespace OnBoarding
 
         private void OnTriggerEnter(Collider other)
         {    
-            if (other.CompareTag("Player"))
+            if (other.CompareTag("Player") && !conclusionSequenceStarted)
             {
-                OnPhaseFourCompleted?.Invoke();
+                StartCoroutine(PlayConclusionSequenceAndTransition());
             }
+        }
+
+        private IEnumerator PlayConclusionSequenceAndTransition()
+        {
+            conclusionSequenceStarted = true;
+
+            yield return new WaitForSeconds(0.5f);
+
+            if (narrator != null && conclusionClip2 != null)
+            {
+                narrator.PlayClip(conclusionClip2);
+                yield return new WaitForSeconds(conclusionClip2.length + 0.5f);
+            }
+
+            if (narrator != null && conclusionClip3 != null)
+            {
+                narrator.PlayClip(conclusionClip3);
+                yield return new WaitForSeconds(conclusionClip3.length + 0.8f);
+            }
+
+            OnPhaseFourCompleted?.Invoke();
         }
     }
 

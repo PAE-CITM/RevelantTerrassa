@@ -59,7 +59,6 @@ namespace OnBoarding
         {
             cameraAudioSource.PlayOneShot(cameraPhotoClip);
 
-            narrator.PlayClip(narratorAudio);
             camera_circle.SetActive(false);
             phase3.SetActive(true);
         }
@@ -94,6 +93,11 @@ namespace OnBoarding
                 }
 
                 audioSource.PlayOneShot(rollConnectedClip);
+
+                if (narrator != null && narratorAudio != null)
+                {
+                    narrator.PlayClip(narratorAudio);
+                }
 
                 StartCoroutine(HandleInsertion(matchedObject));
             }

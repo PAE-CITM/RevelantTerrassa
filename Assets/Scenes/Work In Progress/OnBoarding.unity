@@ -4704,6 +4704,10 @@ MonoBehaviour:
   phase3: {fileID: 1590666351}
   nen: {fileID: 394109536}
   rotationDuration: 0.5
+  narrator: {fileID: 771325087}
+  conclusionClip1: {fileID: 8300000, guid: 7053f233e9dc2204085f235e83dbe4f4, type: 3}
+  conclusionClip2: {fileID: 8300000, guid: 1cf3be6e23958714daf45a691c0308db, type: 3}
+  conclusionClip3: {fileID: 8300000, guid: 917e0f032834a7a4585108104acb1c45, type: 3}
 --- !u!1 &1941847495 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7477139795334575087, guid: e56d6d8e6e650234d8169ee5b4f3fee3, type: 3}
