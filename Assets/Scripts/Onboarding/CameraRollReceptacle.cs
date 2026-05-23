@@ -19,6 +19,12 @@ namespace OnBoarding
         [SerializeField] private narratorAudio narrator;
         public AudioClip narratorAudio;
 
+        [Header("Audio Settings")]
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioSource cameraAudioSource;
+        [SerializeField] private AudioClip rollConnectedClip;
+        [SerializeField] private AudioClip cameraPhotoClip;
+
         [SerializeField]
         private GameObject camera_circle;
 
@@ -51,6 +57,8 @@ namespace OnBoarding
 
         private void StartPhase3()
         {
+            cameraAudioSource.PlayOneShot(cameraPhotoClip);
+
             narrator.PlayClip(narratorAudio);
             camera_circle.SetActive(false);
             phase3.SetActive(true);
@@ -84,6 +92,9 @@ namespace OnBoarding
                 {
                     handTouchTrigger.gameObject.SetActive(true);
                 }
+
+                audioSource.PlayOneShot(rollConnectedClip);
+
                 StartCoroutine(HandleInsertion(matchedObject));
             }
         }

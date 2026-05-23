@@ -32,7 +32,16 @@ public class PuzzlePiece : MonoBehaviour
         {
             grabbable.WhenPointerEventRaised += OnDrop;
         }
-        audioSource.clip = audioGrab;
+
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
+
+        if (audioSource != null && audioGrab != null)
+        {
+            audioSource.clip = audioGrab;
+        }
     }
 
     void Start()
@@ -59,7 +68,7 @@ public class PuzzlePiece : MonoBehaviour
         if (node != null && node.isMatched && node.targetNode != null)
         {
             SnapToPlace(node);
-            Debug.Log($"[PuzzlePiece] {gameObject.name} s'ha col·locat automàticament a l'inici.");
+            Debug.Log($"[PuzzlePiece] {gameObject.name} s'ha colÂ·locat automÃ ticament a l'inici.");
         }
     }
 
@@ -75,12 +84,21 @@ public class PuzzlePiece : MonoBehaviour
 
     private void OnDrop(PointerEvent args)
     {
-        if (isLocked || args.Type != PointerEventType.Unselect) return;
+        if (isLocked) return;
 
-        if (node != null && node.isMatched && node.targetNode != null)
+        if (args.Type == PointerEventType.Select)
         {
-            audioSource.Play();
-            SnapToPlace(node);
+            if (audioSource != null && audioGrab != null)
+            {
+                audioSource.PlayOneShot(audioGrab);
+            }
+        }
+        else if (args.Type == PointerEventType.Unselect)
+        {
+            if (node != null && node.isMatched && node.targetNode != null)
+            {
+                SnapToPlace(node);
+            }
         }
     }
 
@@ -114,8 +132,13 @@ public class PuzzlePiece : MonoBehaviour
         {
             manager.CheckCompletion();
         }
-        audioSource.clip = audioPlace;
-        audioSource.Play();
+
+        if (audioSource != null && audioPlace != null)
+        {
+            audioSource.clip = audioPlace;
+            audioSource.Play();
+        }
+
         if (particle != null) particle.Play();
         if (outline != null) outline.enabled = true;
     }

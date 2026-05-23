@@ -9,13 +9,16 @@ public class PuzzleManager : MonoBehaviour
     private bool puzzleFinished = false;
 
     public AudioSource audioSource;
-    public AudioClip audio;
+    public AudioClip puzzleCompletedClip;
+
+    [Header("Puzzle Music Settings")]
+    [SerializeField] private AudioSource musicSource;
+    [SerializeField] private AudioClip puzzleMusicClip;
 
     // UnityEvent for rigging within the Inspector
     public UnityEvent OnPuzzleCompleted;
     void Start()
     {
-        audioSource.clip = audio;
         ConnectionNode[] foundNodes = GetComponentsInChildren<ConnectionNode>();
         
         foreach (var node in foundNodes)
@@ -24,6 +27,21 @@ public class PuzzleManager : MonoBehaviour
         }
         
         Debug.Log($"[PuzzleManager] {gameObject.name} inicialitzat amb {sockets.Count} sockets.");
+    }
+
+    private void OnEnable()
+    {
+        if (!puzzleFinished)
+        {
+            musicSource.clip = puzzleMusicClip;
+            musicSource.loop = true;
+            musicSource.Play();
+        }
+    }
+
+    private void OnDisable()
+    {
+        musicSource.Stop();
     }
 
     public void CheckCompletion()
@@ -47,7 +65,9 @@ public class PuzzleManager : MonoBehaviour
 
     void WinGame()
     {
-        audioSource.Play();
+        musicSource.Stop();
+        audioSource.PlayOneShot(puzzleCompletedClip);
+
         Debug.Log($"<color=green><b>PUZZLE {gameObject.name} ACABAT!</b></color>");
         OnPuzzleCompleted?.Invoke();
     }

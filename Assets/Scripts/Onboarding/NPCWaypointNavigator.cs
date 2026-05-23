@@ -18,6 +18,7 @@ namespace OnBoarding
         private Transform Npc => npcTransform != null ? npcTransform : transform;
 
         private int currentIndex;
+        private Coroutine activeMoveCoroutine;
 
         public event Action OnArrivedAtWaypoint;
         public event Action OnAllWaypointsCompleted;
@@ -27,7 +28,11 @@ namespace OnBoarding
             if (currentIndex < waypoints.Length - 1)
             {
                 currentIndex++;
-                StartCoroutine(MoveToWaypoint(waypoints[currentIndex]));
+                if (activeMoveCoroutine != null)
+                {
+                    StopCoroutine(activeMoveCoroutine);
+                }
+                activeMoveCoroutine = StartCoroutine(MoveToWaypoint(waypoints[currentIndex]));
             }
         }
 
@@ -36,7 +41,11 @@ namespace OnBoarding
             if (index >= 0 && index < waypoints.Length)
             {
                 currentIndex = index;
-                StartCoroutine(MoveToWaypoint(waypoints[currentIndex]));
+                if (activeMoveCoroutine != null)
+                {
+                    StopCoroutine(activeMoveCoroutine);
+                }
+                activeMoveCoroutine = StartCoroutine(MoveToWaypoint(waypoints[currentIndex]));
             }
         }
 
@@ -96,6 +105,7 @@ namespace OnBoarding
             }
             Npc.rotation = endRot;
 
+            activeMoveCoroutine = null;
             OnArrivedAtWaypoint?.Invoke();
 
             if (currentIndex >= waypoints.Length - 1)
