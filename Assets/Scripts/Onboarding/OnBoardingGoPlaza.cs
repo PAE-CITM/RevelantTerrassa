@@ -28,6 +28,12 @@ namespace OnBoarding
 
         [SerializeField]
         private GameObject phase3;
+        
+        [SerializeField]
+        private GameObject nen;
+
+        [SerializeField]
+        private float rotationDuration = 0.5f;
 
         public void Awake()
         {
@@ -55,6 +61,7 @@ namespace OnBoarding
 
             if (npcNavigator != null)
             {
+                StartCoroutine(RotateSmoothly(nen.transform, 75f, rotationDuration));
                 npcNavigator.OnArrivedAtWaypoint += ActivatePhase4;
                 npcNavigator.MoveToNext();
             }
@@ -62,6 +69,21 @@ namespace OnBoarding
             {
                 ActivatePhase4();
             }
+        }
+
+        private IEnumerator RotateSmoothly(Transform targetTransform, float angleY, float duration)
+        {
+            Quaternion startRot = targetTransform.rotation;
+            Quaternion endRot = startRot * Quaternion.Euler(0f, angleY, 0f);
+
+            float t = 0f;
+            while (t < 1f)
+            {
+                t += Time.deltaTime / duration;
+                targetTransform.rotation = Quaternion.Slerp(startRot, endRot, t);
+                yield return null;
+            }
+            targetTransform.rotation = endRot;
         }
 
         private void ActivatePhase4()
