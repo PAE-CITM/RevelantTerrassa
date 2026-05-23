@@ -69,6 +69,7 @@ namespace OnBoarding
 
             Vector3 start = Npc.position;
             Vector3 end = target.position;
+            end.y = start.y; 
 
             float t = 0f;
             while (t < 1f)
