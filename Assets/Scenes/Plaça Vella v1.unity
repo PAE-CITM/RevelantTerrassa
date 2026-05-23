@@ -1031,7 +1031,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &82702715
 Transform:
   m_ObjectHideFlags: 0
@@ -1040,15 +1040,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82702714}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1039872, y: -0.24006581, z: 0.025873909, w: 0.96482414}
-  m_LocalPosition: {x: 0, y: 1.8003447, z: -0.004}
+  m_LocalRotation: {x: 0.3216314, y: -0.6681837, z: 0.21364047, w: 0.63595724}
+  m_LocalPosition: {x: 0.0134, y: 1.8509, z: -0.0869}
   m_LocalScale: {x: 0.071428575, y: 0.071428575, z: 0.07142858}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1310690707}
   - {fileID: 526709446}
   m_Father: {fileID: 475643502}
-  m_LocalEulerAnglesHint: {x: 12.303, y: -27.945, z: 0}
+  m_LocalEulerAnglesHint: {x: 43.995, y: -97.977, z: -12.694}
 --- !u!114 &82702716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8229,7 +8229,7 @@ Transform:
   m_GameObject: {fileID: 901739142}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.959797, y: 1.15, z: -21.98}
+  m_LocalPosition: {x: 8.55, y: 1.15, z: -22.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8419,7 +8419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &931922707
 Transform:
   m_ObjectHideFlags: 0
@@ -8428,15 +8428,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931922706}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.08383057, y: 0.6193034, z: -0.06674753, w: 0.777805}
-  m_LocalPosition: {x: 0, y: 1.8003447, z: -0.004}
+  m_LocalRotation: {x: 0.508352, y: 0.3834701, z: -0.34041253, w: 0.6918442}
+  m_LocalPosition: {x: -0.05777226, y: 1.8448917, z: 0.07035786}
   m_LocalScale: {x: 0.07142855, y: 0.071428575, z: 0.07142856}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 519312908}
   - {fileID: 730384238}
   m_Father: {fileID: 1067535627}
-  m_LocalEulerAnglesHint: {x: 12.303, y: -27.945, z: 0}
+  m_LocalEulerAnglesHint: {x: 74.682, y: 44.302, z: -17.89}
 --- !u!114 &931922708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8650,7 +8650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a053ecc1844037b468af71a05a3803da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.79
+      value: 5.0291805
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a053ecc1844037b468af71a05a3803da, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8658,7 +8658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a053ecc1844037b468af71a05a3803da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.83
+      value: -5.3882504
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a053ecc1844037b468af71a05a3803da, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11012,15 +11012,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206897738}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1039872, y: -0.24006581, z: 0.025873909, w: 0.96482414}
-  m_LocalPosition: {x: 0, y: 1.8003447, z: -0.004}
+  m_LocalRotation: {x: 0.5632414, y: -0.19662276, z: 0.14014468, w: 0.7902266}
+  m_LocalPosition: {x: -0.0561, y: 1.8441, z: -0.0623}
   m_LocalScale: {x: 0.07142857, y: 0.071428575, z: 0.07142858}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1287864389}
   - {fileID: 209621945}
   m_Father: {fileID: 422929334}
-  m_LocalEulerAnglesHint: {x: 12.303, y: -27.945, z: 0}
+  m_LocalEulerAnglesHint: {x: 70.959, y: -27.945, z: 0}
 --- !u!114 &1206897740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11341,18 +11341,30 @@ PrefabInstance:
       objectReference: {fileID: 422929335}
     - target: {fileID: 3149885842163595690, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3149885842163595690, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3149885842163595690, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
+      propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3149885842163595690, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 82702714}
+      objectReference: {fileID: 1575231230}
+    - target: {fileID: 3149885842163595690, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
+      propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1873618823}
     - target: {fileID: 3149885842163595690, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3149885842163595690, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
+      propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3149885842163595690, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
@@ -11360,7 +11372,15 @@ PrefabInstance:
       value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 3149885842163595690, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
+      propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 3149885842163595690, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3149885842163595690, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
+      propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3149885842163595690, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
@@ -11368,7 +11388,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3149885842163595690, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
+      propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3149885842163595690, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3149885842163595690, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
+      propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -14445,7 +14473,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1480172409
 Transform:
   m_ObjectHideFlags: 0
@@ -16231,7 +16259,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1575231231
 Transform:
   m_ObjectHideFlags: 0
@@ -16240,8 +16268,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575231230}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.086336024, z: -0, w: 0.9962661}
-  m_LocalPosition: {x: 14.787952, y: 0.621, z: 6.266882}
+  m_LocalRotation: {x: -0, y: -0.12968859, z: -0, w: 0.9915548}
+  m_LocalPosition: {x: 13.265135, y: 0.62100005, z: 5.251974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16250,7 +16278,7 @@ Transform:
   - {fileID: 2116963097}
   - {fileID: 1758605083}
   m_Father: {fileID: 162669091}
-  m_LocalEulerAnglesHint: {x: 0, y: -9.906, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -14.903, z: 0}
 --- !u!1 &1590052178
 GameObject:
   m_ObjectHideFlags: 0
@@ -18086,7 +18114,7 @@ Transform:
   m_GameObject: {fileID: 1743795531}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 2.456, z: -23.456}
+  m_LocalPosition: {x: 2.95, y: 2.456, z: -23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19215,18 +19243,30 @@ PrefabInstance:
       objectReference: {fileID: 933903603}
     - target: {fileID: 2280026301524606164, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2280026301524606164, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2280026301524606164, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
+      propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280026301524606164, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 931922706}
+      objectReference: {fileID: 1480172408}
+    - target: {fileID: 2280026301524606164, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
+      propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1575231230}
     - target: {fileID: 2280026301524606164, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280026301524606164, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
+      propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2280026301524606164, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
@@ -19234,7 +19274,15 @@ PrefabInstance:
       value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 2280026301524606164, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
+      propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280026301524606164, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280026301524606164, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
+      propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2280026301524606164, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
@@ -19242,7 +19290,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2280026301524606164, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
+      propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280026301524606164, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280026301524606164, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
+      propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2352739321347100983, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
