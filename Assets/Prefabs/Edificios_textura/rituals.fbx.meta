@@ -3,7 +3,62 @@ guid: 418e6cc0fb7ceed4eb081c021bc9cb5b
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rit_001.001
+    second: {fileID: 2100000, guid: f81bd02f9536466418729d9379a5624b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rit_002.001
+    second: {fileID: 2100000, guid: c59a70f5bd1179342a65b8eaf8c45c82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rit_003.001
+    second: {fileID: 2100000, guid: f06639de4fbe57944a54ddd2c9db13a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rit_004.001
+    second: {fileID: 2100000, guid: edfa5d9cccb352249b010184e5b2577c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rit_005.001
+    second: {fileID: 2100000, guid: 2dcec6670f180ab44b01d8e34f4af807, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rit_006.001
+    second: {fileID: 2100000, guid: 1ec627750d05e2c409e14682f8bd5d6d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rit_007.001
+    second: {fileID: 2100000, guid: e4508fb9f6a363d4880d3106a29fce78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rit_008.001
+    second: {fileID: 2100000, guid: 7c7cc0ebf76722c4794647c0e0973ad4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rit_009.001
+    second: {fileID: 2100000, guid: 5283b6f9ab4ed8c4f91c7d748b1dde5f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rit_010.001
+    second: {fileID: 2100000, guid: c481594a27f20e140b6a05ffe087c587, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rit_011.001
+    second: {fileID: 2100000, guid: 8e15b20dbda935b48bf62f3984109623, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
