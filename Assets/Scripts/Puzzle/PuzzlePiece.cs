@@ -18,6 +18,10 @@ public class PuzzlePiece : MonoBehaviour
 
     public bool isLocked = false;
 
+    [Header("Snapping Settings")]
+    [Tooltip("Marge d'error angular màxim (en graus) per admetre l'encaix.")]
+    public float rotationMargin = 30f;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -53,6 +57,17 @@ public class PuzzlePiece : MonoBehaviour
     {
         if (isLocked) return;
 
+        // Auto-encaix quan la peça entra al seu sensor i la rotació és correcte
+        if (node != null && node.isMatched && node.targetNode != null)
+        {
+            float angleDiff = Quaternion.Angle(transform.rotation, node.targetNode.transform.rotation);
+            if (angleDiff <= rotationMargin)
+            {
+                SnapToPlace(node);
+                return;
+            }
+        }
+
         if (Keyboard.current != null && Keyboard.current.sKey.wasPressedThisFrame)
         {
             TryManualSnap();
@@ -77,7 +92,11 @@ public class PuzzlePiece : MonoBehaviour
 
         if (node != null && node.isMatched && node.targetNode != null)
         {
-            SnapToPlace(node);
+            float angleDiff = Quaternion.Angle(transform.rotation, node.targetNode.transform.rotation);
+            if (angleDiff <= rotationMargin)
+            {
+                SnapToPlace(node);
+            }
         }
     }
 
@@ -96,7 +115,15 @@ public class PuzzlePiece : MonoBehaviour
         {
             if (node != null && node.isMatched && node.targetNode != null)
             {
-                SnapToPlace(node);
+                float angleDiff = Quaternion.Angle(transform.rotation, node.targetNode.transform.rotation);
+                if (angleDiff <= rotationMargin)
+                {
+                    SnapToPlace(node);
+                }
+                else
+                {
+                    Debug.Log($"[PuzzlePiece] Peça '{gameObject.name}' no encaixada per angle incorrecte. Diferència: {angleDiff}° (Marge admès: {rotationMargin}°)");
+                }
             }
         }
     }
