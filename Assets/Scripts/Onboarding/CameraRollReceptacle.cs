@@ -34,6 +34,15 @@ namespace OnBoarding
 
         private bool isInserted = false;
         private bool isReadyForTouch = false;
+        private Dictionary<Collider, bool> _handColliderCache = new Dictionary<Collider, bool>();
+
+        private void OnDisable()
+        {
+            if (_handColliderCache != null)
+            {
+                _handColliderCache.Clear();
+            }
+        }
 
         private void Awake()
         {
@@ -58,9 +67,30 @@ namespace OnBoarding
         private void StartPhase3()
         {
             cameraAudioSource.PlayOneShot(cameraPhotoClip);
-
             camera_circle.SetActive(false);
+            StartCoroutine(ActivatePhase3Gradually());
+        }
+
+        private IEnumerator ActivatePhase3Gradually()
+        {
+            int childCount = phase3.transform.childCount;
+            List<GameObject> children = new List<GameObject>(childCount);
+
+            for (int i = 0; i < childCount; i++)
+            {
+                GameObject child = phase3.transform.GetChild(i).gameObject;
+                children.Add(child);
+                child.SetActive(false);
+            }
+
             phase3.SetActive(true);
+            yield return null;
+
+            foreach (var child in children)
+            {
+                child.SetActive(true);
+                yield return null;
+            }
         }
 
         private void OnTriggerEnter(Collider other)
@@ -156,6 +186,25 @@ namespace OnBoarding
         }
 
         private bool IsHand(Collider other)
+        {
+            if (other == null) return false;
+
+            if (_handColliderCache == null)
+            {
+                _handColliderCache = new Dictionary<Collider, bool>();
+            }
+
+            if (_handColliderCache.TryGetValue(other, out bool isHand))
+            {
+                return isHand;
+            }
+
+            bool result = EvaluateIsHand(other);
+            _handColliderCache[other] = result;
+            return result;
+        }
+
+        private bool EvaluateIsHand(Collider other)
         {
             if (other == null) return false;
 

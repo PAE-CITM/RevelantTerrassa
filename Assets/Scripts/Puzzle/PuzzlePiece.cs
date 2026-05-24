@@ -68,7 +68,6 @@ public class PuzzlePiece : MonoBehaviour
         if (node != null && node.isMatched && node.targetNode != null)
         {
             SnapToPlace(node);
-            Debug.Log($"[PuzzlePiece] {gameObject.name} s'ha col·locat automàticament a l'inici.");
         }
     }
 

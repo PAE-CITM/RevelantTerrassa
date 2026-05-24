@@ -53,16 +53,25 @@ namespace OnBoarding
 
             SetupCanvas();
             FindCamera();
+
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
-        private void Start()
+        private async void Start()
         {
             if (fadeOnAwake)
-                FadeAsync(1.0f, 0.0f,autoFadeDuration);
+            {
+                await FadeAsync(1.0f, 0.0f, autoFadeDuration);
+            }
+            else
+            {
+                transform.root.gameObject.SetActive(false);
+            }
         }
 
         private void OnDestroy()
         {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
             Instance = null;
         }
 
@@ -75,16 +84,6 @@ namespace OnBoarding
                 FollowCamera();
         }
 
-        private void OnEnable()
-        {
-            SceneManager.sceneLoaded += OnSceneLoaded;
-        }
-
-        private void OnDisable()
-        {
-            SceneManager.sceneLoaded -= OnSceneLoaded;
-        }
-
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
             targetCamera = null;
@@ -92,11 +91,17 @@ namespace OnBoarding
             if (!waitingForSceneLoad) return;
             waitingForSceneLoad = false;
 
+            if (!transform.root.gameObject.activeSelf)
+                transform.root.gameObject.SetActive(true);
+
             StartCoroutine(FadeInAfterSceneLoad());
         }
 
         private async void FadeInAsyncAfterSceneLoad()
         {
+            if (!transform.root.gameObject.activeSelf)
+                transform.root.gameObject.SetActive(true);
+
             SetAlpha(1f);
 
             // Ideally this gets called ONCE (similar performance penalty to calling GetComponent() repeatedly)
@@ -111,6 +116,9 @@ namespace OnBoarding
 
         private IEnumerator FadeInAfterSceneLoad()
         {
+            if (!transform.root.gameObject.activeSelf)
+                transform.root.gameObject.SetActive(true);
+
             SetAlpha(1f);
             
             // Ideally this gets called ONCE (similar performance penalty to calling GetComponent() repeatedly)
@@ -183,6 +191,9 @@ namespace OnBoarding
         
         public async Task FadeAsync(float fromAlpha, float toAlpha, float duration)
         {
+            if (!transform.root.gameObject.activeSelf)
+                transform.root.gameObject.SetActive(true);
+
             SetAlpha(fromAlpha);
             float elapsed = 0f;
 
@@ -194,10 +205,17 @@ namespace OnBoarding
             }
 
             SetAlpha(toAlpha);
+
+            // Deactivate canvas when fully transparent to stop VR rendering artifacts
+            if (Mathf.Approximately(toAlpha, 0f))
+                transform.root.gameObject.SetActive(false);
         }
 
         public IEnumerator FadeInRoutine(float duration)
         {
+            if (!transform.root.gameObject.activeSelf)
+                transform.root.gameObject.SetActive(true);
+
             SetAlpha(1f);
             float elapsed = 0f;
 
@@ -209,10 +227,14 @@ namespace OnBoarding
             }
 
             SetAlpha(0f);
+            transform.root.gameObject.SetActive(false);
         }
 
         public IEnumerator FadeOutRoutine(float duration)
         {
+            if (!transform.root.gameObject.activeSelf)
+                transform.root.gameObject.SetActive(true);
+
             SetAlpha(0f);
             float elapsed = 0f;
 

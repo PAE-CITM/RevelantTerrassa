@@ -49,8 +49,6 @@ namespace OnBoarding
             // Comprobar que sea el jugador el que entra
             if (other.CompareTag("Player"))
             {
-                Debug.Log($"[NPCZoneMovementController] El jugador entró en la Zona {zoneIndex}. Moviendo NPC al Waypoint {zoneIndex}.");
-
                 if (npcNavigator != null)
                 {
                     // Mover el NPC al waypoint correspondiente utilizando su índice

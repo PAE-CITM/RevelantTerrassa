@@ -25,8 +25,6 @@ public class PuzzleManager : MonoBehaviour
         {
             sockets.Add(node);
         }
-        
-        Debug.Log($"[PuzzleManager] {gameObject.name} inicialitzat amb {sockets.Count} sockets.");
     }
 
     private void OnEnable()
@@ -54,8 +52,6 @@ public class PuzzleManager : MonoBehaviour
             if (socket.isMatched) matchesFound++;
         }
 
-        Debug.Log($"[PuzzleManager] Progrés: {matchesFound}/{sockets.Count}");
-
         if (matchesFound >= sockets.Count && sockets.Count > 0)
         {
             puzzleFinished = true;
@@ -68,7 +64,6 @@ public class PuzzleManager : MonoBehaviour
         musicSource.Stop();
         audioSource.PlayOneShot(puzzleCompletedClip);
 
-        Debug.Log($"<color=green><b>PUZZLE {gameObject.name} ACABAT!</b></color>");
         OnPuzzleCompleted?.Invoke();
     }
 }

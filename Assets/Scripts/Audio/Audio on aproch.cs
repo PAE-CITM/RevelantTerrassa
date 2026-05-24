@@ -9,8 +9,6 @@ public class Audioonaproch : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("El player entró en la zona");
-
         if (onetime == true && other.CompareTag("Player"))
         {
             narrator.PlayClip(narratorAudio);

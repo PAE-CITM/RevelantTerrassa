@@ -25,7 +25,6 @@ public class MenuController : MonoBehaviour
     async Task QuitGameAsync()
     {
         await ScreenFader.Instance.FadeAsync(0.0f, 1.0f, 3);
-        Debug.Log("Salir del juego");
         Application.Quit(); // Ignored in editor
     }
 }

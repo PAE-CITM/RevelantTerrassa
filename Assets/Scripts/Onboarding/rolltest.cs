@@ -6,7 +6,6 @@ namespace OnBoarding
     {
         public void printTest()
         {
-            Debug.Log("Roll inserted into the camera");
         }
     }
 }

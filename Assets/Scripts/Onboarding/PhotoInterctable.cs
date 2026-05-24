@@ -16,6 +16,43 @@ namespace OnBoarding
         private float currentLookTime;
         private bool isCompleted;
 
+        private MaterialPropertyBlock propertyBlock;
+        private int colorPropertyId = 0;
+        private Color baseColor = Color.white;
+        private bool isInitialized = false;
+
+        private void InitializePropertyBlock()
+        {
+            if (isInitialized) return;
+            if (photoRenderer != null && photoRenderer.sharedMaterial != null)
+            {
+                if (photoRenderer.sharedMaterial.HasProperty("_BaseColor"))
+                {
+                    colorPropertyId = Shader.PropertyToID("_BaseColor");
+                    baseColor = photoRenderer.sharedMaterial.GetColor(colorPropertyId);
+                }
+                else if (photoRenderer.sharedMaterial.HasProperty("_Color"))
+                {
+                    colorPropertyId = Shader.PropertyToID("_Color");
+                    baseColor = photoRenderer.sharedMaterial.GetColor(colorPropertyId);
+                }
+                else
+                {
+                    colorPropertyId = Shader.PropertyToID("_Color");
+                    try
+                    {
+                        baseColor = photoRenderer.sharedMaterial.color;
+                    }
+                    catch
+                    {
+                        baseColor = Color.white;
+                    }
+                }
+            }
+            propertyBlock = new MaterialPropertyBlock();
+            isInitialized = true;
+        }
+
         private void OnEnable()
         {
             currentLookTime = 0f;
@@ -84,9 +121,14 @@ namespace OnBoarding
         {
             if (photoRenderer == null) return;
             
-            Color color = photoRenderer.material.color;
+            InitializePropertyBlock();
+            
+            Color color = baseColor;
             color.a = alpha;
-            photoRenderer.material.color = color;
+            
+            photoRenderer.GetPropertyBlock(propertyBlock);
+            propertyBlock.SetColor(colorPropertyId, color);
+            photoRenderer.SetPropertyBlock(propertyBlock);
         }
     }
 }
