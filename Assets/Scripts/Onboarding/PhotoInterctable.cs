@@ -63,10 +63,10 @@ namespace OnBoarding
         private void Update()
         {
             if (isCompleted)
-                return;
-
+               return;
+            /*
             if (Input.GetKeyDown(debugSkipKey))
-                CompletePhoto();
+                CompletePhoto();*/
         }
 
         public void Show()
