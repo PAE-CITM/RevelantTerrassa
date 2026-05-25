@@ -52,7 +52,7 @@ Rigidbody:
   m_GameObject: {fileID: 368613578970951740}
   serializedVersion: 5
   m_Mass: 1
-  m_LinearDamping: 0
+  m_LinearDamping: 1
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -66,7 +66,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
@@ -90,7 +90,7 @@ MonoBehaviour:
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
   _rigidbody: {fileID: 8315411476824331375}
-  _kinematicWhileSelected: 1
+  _kinematicWhileSelected: 0
   _throwWhenUnselected: 1
   _forceKinematicDisabled: 0
 --- !u!114 &3087015763227238170
@@ -130,6 +130,7 @@ MonoBehaviour:
   audioGrab: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
   particle: {fileID: -6013830721655506836}
   isLocked: 0
+  rotationMargin: 30
 --- !u!114 &3999962873911427059
 MonoBehaviour:
   m_ObjectHideFlags: 0
