@@ -3,7 +3,92 @@ guid: 5c9303438ca12154cad4fd5341f4b5f6
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cat_001.003
+    second: {fileID: 2100000, guid: a7efea8f84067f44799ce26e502b3662, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cat_004.003
+    second: {fileID: 2100000, guid: f9896c707cba839418e88aecdf8b24a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cat_005.003
+    second: {fileID: 2100000, guid: 9cb629d050bca2d4d83f6b26e600eaee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cat_006.003
+    second: {fileID: 2100000, guid: b587e28dfc9f73243ad42de88a099749, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cat_008.003
+    second: {fileID: 2100000, guid: fd3d4133e1fec9840862616b421c6302, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cat_009.003
+    second: {fileID: 2100000, guid: c77fe002fc92f5a4e8043c43b0980ad9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cat_010.003
+    second: {fileID: 2100000, guid: 300a3da1fd138a943806c6311458ecc5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cat_011.003
+    second: {fileID: 2100000, guid: a482e98a689f47341ae776e60b8c80f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cat_012.003
+    second: {fileID: 2100000, guid: 915c6e412f2506541b63501d9c3ea0dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cat_013.003
+    second: {fileID: 2100000, guid: bb9e48892e77ad34bbd6bb9460467ae5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cat_014.003
+    second: {fileID: 2100000, guid: 1bf6cc97c91531647b671d379ec0fbe0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cat_015.003
+    second: {fileID: 2100000, guid: 52956c8b24d42744f81ef3e2863870d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cat_020.003
+    second: {fileID: 2100000, guid: 1852c08872722e24b888b8152a349d67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cat_022.003
+    second: {fileID: 2100000, guid: 62f33a8785750f24cb3cc7f85313a0ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cat_027.003
+    second: {fileID: 2100000, guid: b727d20bbbe30f048a275bc725ec4585, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cat_028.003
+    second: {fileID: 2100000, guid: f8510a0ed70d6d6488c7987861ace67d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cat_029.003
+    second: {fileID: 2100000, guid: 8605f6c2282eb7d4f9dc99f004eb504a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
