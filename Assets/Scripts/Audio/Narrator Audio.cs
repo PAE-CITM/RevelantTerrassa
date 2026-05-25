@@ -7,9 +7,8 @@ public class narratorAudio : MonoBehaviour
     public AudioSource audioSource;
 
     public AudioClip firstClip;
-    
 
-   
+    [SerializeField] private float firstClipDelay = 10f;
 
     private void Start()
     {
@@ -21,7 +20,7 @@ public class narratorAudio : MonoBehaviour
 
     private IEnumerator PlayFirstClipWithDelay()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(firstClipDelay);
         PlayClip(firstClip);
     }
 
