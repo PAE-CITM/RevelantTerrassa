@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: 5838e892-31a4-4f65-a415-dc108aefa14c
-  instanceId: c0d0471d-ceb3-4dce-8d27-111add642ee1
+  instanceId: b26e9cd0-a529-4961-a388-20e9b038535a
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: c88fc9f2-e9d1-41ea-b937-cdaf92a806d0
@@ -1672,8 +1672,8 @@ RectTransform:
   m_Children:
   - {fileID: 7848767547081676895}
   - {fileID: 5548657246329217869}
-  - {fileID: 2827181960402813140}
   - {fileID: 2848889326556660527}
+  - {fileID: 2827181960402813140}
   m_Father: {fileID: 4910587465717154145}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2283,7 +2283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: 5838e892-31a4-4f65-a415-dc108aefa14c
-  instanceId: 61c2796e-929c-42b3-94b6-d92647523527
+  instanceId: 1eb1367d-c08a-49a4-af4b-ba474d7ea868
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: c88fc9f2-e9d1-41ea-b937-cdaf92a806d0

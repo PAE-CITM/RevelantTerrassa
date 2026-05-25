@@ -1513,6 +1513,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 31665637354296222, guid: f9e96473e800509499dfda80b3e3ebaa, type: 3}
+      propertyPath: maxTextureSize
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 31665637354296222, guid: f9e96473e800509499dfda80b3e3ebaa, type: 3}
+      propertyPath: renderInterval
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2319926112919517708, guid: f9e96473e800509499dfda80b3e3ebaa, type: 3}
       propertyPath: m_Name
       value: MainMenu
