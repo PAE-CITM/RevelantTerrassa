@@ -26,7 +26,7 @@ MonoBehaviour:
   m_SupportsHDR: 0
   m_HDRColorBufferPrecision: 0
   m_MSAA: 4
-  m_RenderScale: 0.8
+  m_RenderScale: 1.6
   m_UpscalingFilter: 0
   m_FsrOverrideSharpness: 0
   m_FsrSharpness: 0.92
@@ -85,7 +85,7 @@ MonoBehaviour:
   m_SupportScreenSpaceLensFlare: 1
   m_GPUResidentDrawerMode: 1
   m_SmallMeshScreenPercentage: 0
-  m_GPUResidentDrawerEnableOcclusionCullingInCameras: 0
+  m_GPUResidentDrawerEnableOcclusionCullingInCameras: 1
   m_ShadowType: 1
   m_LocalShadowsSupported: 0
   m_LocalShadowsAtlasResolution: 256
@@ -105,10 +105,10 @@ MonoBehaviour:
   m_PrefilteringModeAdditionalLightShadows: 0
   m_PrefilterXRKeywords: 0
   m_PrefilteringModeForwardPlus: 2
-  m_PrefilteringModeDeferredRendering: 0
+  m_PrefilteringModeDeferredRendering: 2
   m_PrefilteringModeScreenSpaceOcclusion: 0
   m_PrefilterDebugKeywords: 1
-  m_PrefilterWriteRenderingLayers: 1
+  m_PrefilterWriteRenderingLayers: 0
   m_PrefilterHDROutput: 1
   m_PrefilterAlphaOutput: 1
   m_PrefilterSSAODepthNormals: 1
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_PrefilterSoftShadowsQualityHigh: 1
   m_PrefilterSoftShadows: 0
   m_PrefilterScreenCoord: 1
-  m_PrefilterNativeRenderPass: 1
+  m_PrefilterNativeRenderPass: 0
   m_PrefilterUseLegacyLightmaps: 1
   m_PrefilterBicubicLightmapSampling: 1
   m_PrefilterReflectionProbeBlending: 0
