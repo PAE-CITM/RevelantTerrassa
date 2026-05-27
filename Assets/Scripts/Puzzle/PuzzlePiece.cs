@@ -165,7 +165,7 @@ public class PuzzlePiece : MonoBehaviour
             audioSource.Play();
         }
 
-        if (particle != null) particle.Play();
+        // if (particle != null) particle.Play();
         if (outline != null) outline.enabled = true;
     }
 

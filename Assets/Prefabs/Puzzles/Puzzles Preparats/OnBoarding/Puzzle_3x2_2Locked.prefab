@@ -36,6 +36,7 @@ Transform:
   - {fileID: 9106693284715292952}
   - {fileID: 8201994043992726950}
   - {fileID: 151253649613464051}
+  - {fileID: 811062471733705333}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2423509080160488699
@@ -356,6 +357,73 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5034806229339812351, guid: d9ce27a496fe931438c682dc819748bf, type: 3}
   m_PrefabInstance: {fileID: 5171933318924996620}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7062783543326389473
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 515112631785819514}
+    m_Modifications:
+    - target: {fileID: 3227695292363000775, guid: 28fd5ad7c7678ca448f872fa3c315f22, type: 3}
+      propertyPath: m_Name
+      value: ParticleSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585598010204606100, guid: 28fd5ad7c7678ca448f872fa3c315f22, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.061
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585598010204606100, guid: 28fd5ad7c7678ca448f872fa3c315f22, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.075
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585598010204606100, guid: 28fd5ad7c7678ca448f872fa3c315f22, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0277102
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585598010204606100, guid: 28fd5ad7c7678ca448f872fa3c315f22, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585598010204606100, guid: 28fd5ad7c7678ca448f872fa3c315f22, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585598010204606100, guid: 28fd5ad7c7678ca448f872fa3c315f22, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585598010204606100, guid: 28fd5ad7c7678ca448f872fa3c315f22, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585598010204606100, guid: 28fd5ad7c7678ca448f872fa3c315f22, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585598010204606100, guid: 28fd5ad7c7678ca448f872fa3c315f22, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585598010204606100, guid: 28fd5ad7c7678ca448f872fa3c315f22, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 28fd5ad7c7678ca448f872fa3c315f22, type: 3}
+--- !u!4 &811062471733705333 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7585598010204606100, guid: 28fd5ad7c7678ca448f872fa3c315f22, type: 3}
+  m_PrefabInstance: {fileID: 7062783543326389473}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3464507065616296852 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5913343839943417717, guid: 28fd5ad7c7678ca448f872fa3c315f22, type: 3}
+  m_PrefabInstance: {fileID: 7062783543326389473}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9158507850248621321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -478,6 +546,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6120653895858231163, guid: a95c028705009894cbaa93853e511b9f, type: 3}
+      propertyPath: completionParticles
+      value: 
+      objectReference: {fileID: 3464507065616296852}
+    - target: {fileID: 6120653895858231163, guid: a95c028705009894cbaa93853e511b9f, type: 3}
+      propertyPath: puzzleCompletedClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 090da78e54a822e44829509d3cd85552, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

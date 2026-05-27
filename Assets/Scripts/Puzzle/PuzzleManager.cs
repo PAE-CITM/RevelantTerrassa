@@ -23,6 +23,10 @@ public class PuzzleManager : MonoBehaviour
     // UnityEvent for rigging within the Inspector
     public UnityEvent OnPuzzleCompleted;
 
+    [Header("Puzzle Completion Effects")]
+    [SerializeField] private ParticleSystem completionParticles;
+    [SerializeField] private float completionAudioDelay = 2.0f;
+
     private void Awake()
     {
         if (musicSource != null)
@@ -90,10 +94,24 @@ public class PuzzleManager : MonoBehaviour
 
         if (audioSource != null && puzzleCompletedClip != null)
         {
-            audioSource.PlayOneShot(puzzleCompletedClip);
+            StartCoroutine(PlayCompletionAudioDelayed(completionAudioDelay));
+        }
+
+        if (completionParticles != null)
+        {
+            completionParticles.Play();
         }
 
         OnPuzzleCompleted?.Invoke();
+    }
+
+    private IEnumerator PlayCompletionAudioDelayed(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (audioSource != null && puzzleCompletedClip != null)
+        {
+            audioSource.PlayOneShot(puzzleCompletedClip);
+        }
     }
 
     private IEnumerator FadeMusic(float targetVolume, float duration, bool stopOnComplete = false)
