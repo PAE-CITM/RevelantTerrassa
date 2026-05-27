@@ -9599,7 +9599,7 @@ PrefabInstance:
     - target: {fileID: 3149885842163595690, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
       propertyPath: puzzleCompletedClip
       value: 
-      objectReference: {fileID: 8300000, guid: 090da78e54a822e44829509d3cd85552, type: 3}
+      objectReference: {fileID: 8300000, guid: 1cd4482ed8348c544ad8b7256cef55ab, type: 3}
     - target: {fileID: 3149885842163595690, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -9646,7 +9646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3149885842163595690, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 1500
+      value: 8000
       objectReference: {fileID: 0}
     - target: {fileID: 3149885842163595690, guid: e21698ff6ba254140b172984115f8b5c, type: 3}
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
@@ -12145,6 +12145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1480172409}
   - component: {fileID: 1480172410}
+  - component: {fileID: 1480172412}
   - component: {fileID: 1480172411}
   m_Layer: 0
   m_Name: 3r
@@ -12183,7 +12184,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a569d3aa78e4344f89485b9c7dbea37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DelayedGameObjectToggle
---- !u!82 &1480172411
+--- !u!114 &1480172411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480172408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0f4fd312ce27740be433bb6ad3d569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DelayedAudioPlayer
+  audioSource: {fileID: 578288875}
+  audioClip: {fileID: 8300000, guid: 9af87c6f40a5ca74096a924300de1de1, type: 3}
+  delaySeconds: 12
+--- !u!82 &1480172412
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12194,7 +12210,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 637d7003aecf07f43b6a68bb44a580e8, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -13397,6 +13413,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puzzle_4x3
       objectReference: {fileID: 0}
+    - target: {fileID: 167697182060691332, guid: 5290c4c394950e647884e59e6b05dd1a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2280026301524606164, guid: 5290c4c394950e647884e59e6b05dd1a, type: 3}
       propertyPath: audioSource
       value: 
@@ -13405,6 +13425,10 @@ PrefabInstance:
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1480172410}
+    - target: {fileID: 2280026301524606164, guid: 5290c4c394950e647884e59e6b05dd1a, type: 3}
+      propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 8000
+      objectReference: {fileID: 0}
     - target: {fileID: 6967315897167195234, guid: 5290c4c394950e647884e59e6b05dd1a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.03918
@@ -13477,6 +13501,7 @@ GameObject:
   - component: {fileID: 1575231231}
   - component: {fileID: 1575231232}
   - component: {fileID: 1575231233}
+  - component: {fileID: 1575231234}
   m_Layer: 0
   m_Name: 2n
   m_TagString: Untagged
@@ -13524,7 +13549,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 9af87c6f40a5ca74096a924300de1de1, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -13610,6 +13635,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1575231234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575231230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0f4fd312ce27740be433bb6ad3d569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DelayedAudioPlayer
+  audioSource: {fileID: 578288875}
+  audioClip: {fileID: 8300000, guid: 955ae0abfe176024eada6c1dc0e257d5, type: 3}
+  delaySeconds: 12
 --- !u!1001 &1612308979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14814,7 +14854,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.92
+      value: -11.04
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14822,23 +14862,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.16
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.52305305
+      value: 0.58637244
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.85230017
+      value: 0.81004155
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14846,7 +14886,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -116.925
+      value: 108.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -14872,6 +14912,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Idle_poli
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: e7ec84b9276bf0447977ebd93339e7ef, type: 3}
     - target: {fileID: 5866666021909216657, guid: 37a3a3e2bf50e6c4ea6c8a58909ce00a, type: 3}
       propertyPath: m_Controller
       value: 
@@ -16390,6 +16434,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1959757182}
     - target: {fileID: 2280026301524606164, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
+      propertyPath: puzzleCompletedClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cd4482ed8348c544ad8b7256cef55ab, type: 3}
+    - target: {fileID: 2280026301524606164, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -16435,7 +16483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2280026301524606164, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 1500
+      value: 8000
       objectReference: {fileID: 0}
     - target: {fileID: 2280026301524606164, guid: 814ee34b1fcd0e348add1727bb519051, type: 3}
       propertyPath: OnPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
@@ -16978,8 +17026,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DelayedAudioPlayer
   audioSource: {fileID: 578288875}
-  audioClip: {fileID: 8300000, guid: 955ae0abfe176024eada6c1dc0e257d5, type: 3}
-  delaySeconds: 2.5
+  audioClip: {fileID: 8300000, guid: 637d7003aecf07f43b6a68bb44a580e8, type: 3}
+  delaySeconds: 12
 --- !u!82 &1873618827
 AudioSource:
   m_ObjectHideFlags: 0

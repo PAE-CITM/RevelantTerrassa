@@ -46,6 +46,11 @@ namespace OnBoarding
             if (fader != null)
                 yield return StartCoroutine(fader.FadeInRoutine(roomFadeDuration));
 
+            if (narrator != null && narrator.firstClip != null)
+            {
+                narrator.PlayClip(narrator.firstClip);
+            }
+
             for (int i = 0; i < photos.Length; i++)
             {
                 if (i > 0 && audioSource != null && photoAppearClip != null)

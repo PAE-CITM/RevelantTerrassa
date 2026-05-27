@@ -14,14 +14,6 @@ public class narratorAudio : MonoBehaviour
     {
         if (audioSource == null)
             audioSource = GetComponent<AudioSource>();
-
-        StartCoroutine(PlayFirstClipWithDelay());
-    }
-
-    private IEnumerator PlayFirstClipWithDelay()
-    {
-        yield return new WaitForSeconds(firstClipDelay);
-        PlayClip(firstClip);
     }
 
    

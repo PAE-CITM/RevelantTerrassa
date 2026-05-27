@@ -17,7 +17,7 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private AudioClip puzzleMusicClip;
     [SerializeField] private float fadeDuration = 1.5f;
 
-    private float maxMusicVolume = 1f;
+    private float maxMusicVolume = 0.5f;
     private Coroutine fadeCoroutine;
 
     // UnityEvent for rigging within the Inspector
