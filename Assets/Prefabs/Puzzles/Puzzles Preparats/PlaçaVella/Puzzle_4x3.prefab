@@ -909,7 +909,7 @@ PrefabInstance:
     - target: {fileID: 6120653895858231163, guid: 70dace4d4b86d6d46af47c177be22eed, type: 3}
       propertyPath: completionParticles
       value: 
-      objectReference: {fileID: 3822844835210764873}
+      objectReference: {fileID: 0}
     - target: {fileID: 6120653895858231163, guid: 70dace4d4b86d6d46af47c177be22eed, type: 3}
       propertyPath: puzzleCompletedClip
       value: 
@@ -1459,11 +1459,6 @@ PrefabInstance:
 --- !u!4 &1033689126942618536 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7585598010204606100, guid: 28fd5ad7c7678ca448f872fa3c315f22, type: 3}
-  m_PrefabInstance: {fileID: 7430116933095062844}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &3822844835210764873 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 5913343839943417717, guid: 28fd5ad7c7678ca448f872fa3c315f22, type: 3}
   m_PrefabInstance: {fileID: 7430116933095062844}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7732722214116316551
