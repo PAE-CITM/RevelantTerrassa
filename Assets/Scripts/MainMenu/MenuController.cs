@@ -8,13 +8,7 @@ public class MenuController : MonoBehaviour
 {
     public void StartGame()
     {
-        LoadScene();
-    }
-
-    async Task LoadScene()
-    {
-        await ScreenFader.Instance.FadeAsync(0.0f, 1.0f, 3);
-        SceneManager.LoadScene("OnBoarding");
+        
     }
 
     public void QuitGame()

@@ -419,11 +419,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28fd5ad7c7678ca448f872fa3c315f22, type: 3}
---- !u!198 &2256847127964626195 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 5913343839943417717, guid: 28fd5ad7c7678ca448f872fa3c315f22, type: 3}
-  m_PrefabInstance: {fileID: 5566876183869747814}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2595464637999004914 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7585598010204606100, guid: 28fd5ad7c7678ca448f872fa3c315f22, type: 3}
@@ -559,7 +554,7 @@ PrefabInstance:
     - target: {fileID: 6120653895858231163, guid: a95c028705009894cbaa93853e511b9f, type: 3}
       propertyPath: completionParticles
       value: 
-      objectReference: {fileID: 2256847127964626195}
+      objectReference: {fileID: 0}
     - target: {fileID: 6120653895858231163, guid: a95c028705009894cbaa93853e511b9f, type: 3}
       propertyPath: puzzleCompletedClip
       value: 
