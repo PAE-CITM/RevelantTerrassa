@@ -3,7 +3,52 @@ guid: 01f7bfc513c990143bffe152a66c0d22
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CaC_001.001
+    second: {fileID: 2100000, guid: 8e7b27b5f5b5d97489f46979e77c4da3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CaC_002.001
+    second: {fileID: 2100000, guid: cb0b1ff70fbc310448b6a59278b5ce1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cac_003.001
+    second: {fileID: 2100000, guid: b9cc198d5b7b42d4ca00ad690005dd6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cac_004.001
+    second: {fileID: 2100000, guid: 1c8da74b565e2284ba57617d5837a3dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cac_005.001
+    second: {fileID: 2100000, guid: bd6bb78c96c85974ab28a420a78d753d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cac_006.001
+    second: {fileID: 2100000, guid: 92fd52800c474e14a972deb21ab4dace, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cac_007.001
+    second: {fileID: 2100000, guid: 44be0328e71b9f14e8b74b2cc51a5141, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cac_008.001
+    second: {fileID: 2100000, guid: 725cc6d440af9db48a51e17814b7817e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standardSurface1
+    second: {fileID: 2100000, guid: 650255def2dcd9e4c893d46edfdce1dc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
