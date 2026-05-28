@@ -7,11 +7,26 @@ public class Audioonaproch : MonoBehaviour
     [SerializeField] private narratorAudio narrator;
     public AudioClip narratorAudio;
 
+    private void Start()
+    {
+        if (narrator == null)
+        {
+            narrator = FindFirstObjectByType<narratorAudio>();
+            if (narrator == null)
+            {
+                Debug.LogError("narratorAudio not found in the scene! Please assign it in the inspector.", this);
+            }
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (onetime == true && other.CompareTag("Player"))
         {
-            narrator.PlayClip(narratorAudio);
+            if (narrator != null)
+            {
+                narrator.PlayClip(narratorAudio);
+            }
             onetime = false;
 
             Collider[] colliders = GetComponents<Collider>();

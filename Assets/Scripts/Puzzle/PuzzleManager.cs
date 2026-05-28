@@ -9,6 +9,26 @@ public class PuzzleManager : MonoBehaviour
     private List<ConnectionNode> sockets = new List<ConnectionNode>();
     private bool puzzleFinished = false;
 
+    public bool IsPuzzleFinished => puzzleFinished;
+
+    public bool IsPuzzleInProgress()
+    {
+        if (puzzleFinished) return false;
+
+        PuzzlePiece[] pieces = GetComponentsInChildren<PuzzlePiece>();
+        foreach (var piece in pieces)
+        {
+            if (piece.isLocked) return true;
+        }
+
+        foreach (var socket in sockets)
+        {
+            if (socket.isMatched) return true;
+        }
+
+        return false;
+    }
+
     public AudioSource audioSource;
     public AudioClip puzzleCompletedClip;
 
