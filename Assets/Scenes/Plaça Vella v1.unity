@@ -7272,6 +7272,14 @@ PrefabInstance:
       value: cercle_terra_esglesia
       objectReference: {fileID: 0}
     - target: {fileID: 6637153109019190488, guid: 5d4e8a55e05c5f949939ac633b040b55, type: 3}
+      propertyPath: lengthInSec
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637153109019190488, guid: 5d4e8a55e05c5f949939ac633b040b55, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637153109019190488, guid: 5d4e8a55e05c5f949939ac633b040b55, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.0047169924
       objectReference: {fileID: 0}
@@ -17701,6 +17709,14 @@ PrefabInstance:
       value: cercle_terra_meson
       objectReference: {fileID: 0}
     - target: {fileID: 6637153109019190488, guid: 5d4e8a55e05c5f949939ac633b040b55, type: 3}
+      propertyPath: lengthInSec
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637153109019190488, guid: 5d4e8a55e05c5f949939ac633b040b55, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637153109019190488, guid: 5d4e8a55e05c5f949939ac633b040b55, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.0047169924
       objectReference: {fileID: 0}
@@ -18617,6 +18633,14 @@ PrefabInstance:
     - target: {fileID: 6121577625231185539, guid: 5d4e8a55e05c5f949939ac633b040b55, type: 3}
       propertyPath: m_Name
       value: cercle_terra_amfora
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637153109019190488, guid: 5d4e8a55e05c5f949939ac633b040b55, type: 3}
+      propertyPath: lengthInSec
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637153109019190488, guid: 5d4e8a55e05c5f949939ac633b040b55, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6637153109019190488, guid: 5d4e8a55e05c5f949939ac633b040b55, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
