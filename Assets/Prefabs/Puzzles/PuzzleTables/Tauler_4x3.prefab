@@ -126,6 +126,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea7ddb762bb051849a9e27fc3b98391a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleManager
+  audioSource: {fileID: 0}
+  puzzleCompletedClip: {fileID: 0}
+  musicSource: {fileID: 0}
+  puzzleMusicClip: {fileID: 0}
+  fadeDuration: 1.5
+  OnPuzzleCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  completionParticles: {fileID: 0}
+  completionAudioDelay: 2
 --- !u!1 &2213031848949986734
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,6 +987,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: fb776473d86ee8343a47b277646206ee, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -4450018497335256519, guid: d1c620785eda60a41af3f2f3f87670fc, type: 3}
     - target: {fileID: 919132149155446097, guid: fb776473d86ee8343a47b277646206ee, type: 3}
       propertyPath: m_Name
       value: Cuadro_4x3
