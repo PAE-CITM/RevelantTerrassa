@@ -506,6 +506,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tauler_3x2
       objectReference: {fileID: 0}
+    - target: {fileID: 4376529329672204347, guid: a95c028705009894cbaa93853e511b9f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2280
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376529329672204347, guid: a95c028705009894cbaa93853e511b9f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1554.5453
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376529329672204347, guid: a95c028705009894cbaa93853e511b9f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 103.63637
+      objectReference: {fileID: 0}
     - target: {fileID: 5374290270938453426, guid: a95c028705009894cbaa93853e511b9f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0008
