@@ -5876,6 +5876,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 578288876}
+  - component: {fileID: 578288877}
   - component: {fileID: 578288875}
   m_Layer: 0
   m_Name: Narrador
@@ -5895,7 +5896,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 280ea93abdc818e4086ad12eeef2bff0, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5996,6 +5997,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &578288877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578288874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c32b4aa8cd7bf24682d82482f1c754a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::narratorAudio
+  audioSource: {fileID: 578288875}
+  firstClip: {fileID: 8300000, guid: 280ea93abdc818e4086ad12eeef2bff0, type: 3}
+  firstClipDelay: 1
+  idleClips:
+  - {fileID: 8300000, guid: f5b6995e6ebf36b4995ede5e763603cd, type: 3}
+  - {fileID: 8300000, guid: 095407b2aee37c149aff13aed50a5606, type: 3}
+  - {fileID: 8300000, guid: aa40dbaaefcc3144caca15ee6b3c2555, type: 3}
+  - {fileID: 8300000, guid: 1b7a53d0183914547bb85383121b5153, type: 3}
+  minIntervalSeconds: 180
+  maxIntervalSeconds: 240
+  checkStatusInterval: 2
 --- !u!1 &582102752 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 167697182060691332, guid: 5290c4c394950e647884e59e6b05dd1a, type: 3}
@@ -6051,7 +6075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Audioonaproch
   narrator: {fileID: 0}
-  narratorAudio: {fileID: 8300000, guid: ee2bb7e2491b690499f123a26161930f, type: 3}
+  narratorAudio: {fileID: 0}
 --- !u!65 &601459688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6809,7 +6833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Audioonaproch
   narrator: {fileID: 0}
-  narratorAudio: {fileID: 8300000, guid: ee2bb7e2491b690499f123a26161930f, type: 3}
+  narratorAudio: {fileID: 0}
 --- !u!65 &738045960
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8729,7 +8753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Audioonaproch
   narrator: {fileID: 0}
-  narratorAudio: {fileID: 8300000, guid: ee2bb7e2491b690499f123a26161930f, type: 3}
+  narratorAudio: {fileID: 0}
 --- !u!65 &934442672
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10376,7 +10400,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1068929572}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -14372,7 +14396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1480172409
 Transform:
   m_ObjectHideFlags: 0
@@ -15809,7 +15833,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667847952}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -19049,7 +19073,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909943798}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
