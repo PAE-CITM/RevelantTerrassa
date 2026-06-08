@@ -7,12 +7,13 @@ public class RandomAudioOnApproach : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private List<AudioClip> audioClips = new List<AudioClip>();
     [SerializeField] private string playerTag = "Player";
-    [SerializeField] private float cooldownTime = 3.5f;
+    [SerializeField] private float cooldownTime = 15f;
 
     private List<AudioClip> availableClips = new List<AudioClip>();
     private AudioClip lastPlayed;
     private AudioClip secondLastPlayed;
     private float lastTriggerTime;
+    private bool playerTriggered = false;
 
     private void Start()
     {
@@ -27,6 +28,7 @@ public class RandomAudioOnApproach : MonoBehaviour
     {
         if (other.CompareTag(playerTag))
         {
+            playerTriggered = true;
             if (audioSource != null && audioSource.isPlaying) return;
 
             PlayRandomAudio();
@@ -34,17 +36,16 @@ public class RandomAudioOnApproach : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void Update()
     {
-        if (other.CompareTag(playerTag))
-        {
-            if (audioSource != null && audioSource.isPlaying) return;
+        if (!playerTriggered) return;
 
-            if (Time.time >= lastTriggerTime + cooldownTime)
-            {
-                PlayRandomAudio();
-                lastTriggerTime = Time.time;
-            }
+        if (audioSource != null && audioSource.isPlaying) return;
+
+        if (Time.time >= lastTriggerTime + cooldownTime)
+        {
+            PlayRandomAudio();
+            lastTriggerTime = Time.time;
         }
     }
 
@@ -52,6 +53,7 @@ public class RandomAudioOnApproach : MonoBehaviour
     {
         if (other.CompareTag(playerTag))
         {
+            playerTriggered = false;
             lastTriggerTime = 0f;
         }
     }
